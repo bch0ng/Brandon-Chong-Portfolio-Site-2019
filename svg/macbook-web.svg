@@ -1,0 +1,83 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2378.76 1470.61">
+    <defs>
+        <style>
+            g#program_code rect {
+                display: none;
+            }
+            .cls-1 {
+                fill: #bfbebe;
+            }
+            
+            .cls-2 {
+                fill: #e7e7e7;
+            }
+            
+            .cls-3 {
+                fill: #181818;
+            }
+            
+            .cls-4 {
+                fill: #d04899;
+            }
+            
+            .cls-5 {
+                fill: #fff;
+            }
+            
+            .cls-6 {
+                fill: #5684c3;
+            }
+        </style>
+    </defs>
+    <title>Artboard 2</title>
+    <g id="laptop">
+        <rect x="216.28" y="73.02" width="1884.94" height="1275.85" rx="64" ry="64" />
+        <path class="cls-1" d="M20.38,1381.8s-5,23.33,149.28,23.33H2221.22s79.68.61,93.2-22.85V1352.5H20.24Z" />
+        <rect class="cls-2" x="20.73" y="1337.32" width="2294.14" height="44.95" />
+        <rect class="cls-3" x="271.43" y="131.94" width="1774.65" height="1158.74" />
+        <path class="cls-1" d="M1372.62,1348.56a11.24,11.24,0,0,1-11.24,11.24H974.22A11.24,11.24,0,0,1,963,1348.56h0a11.24,11.24,0,0,1,11.24-11.24h387.17a11.24,11.24,0,0,1,11.24,11.24Z" />
+    </g>
+    <g id="program_code" data-name="program code">
+        <rect class="cls-4" x="331.78" y="184.28" width="462.17" height="13.5" />
+        <rect class="cls-5" x="331.78" y="223.95" width="316.41" height="13.5" />
+        <rect class="cls-5" x="663.66" y="223.95" width="316.41" height="13.5" />
+        <rect class="cls-5" x="622.48" y="269.33" width="243.97" height="10.41" />
+        <rect class="cls-5" x="331.78" y="267.78" width="265.25" height="13.5" />
+        <rect class="cls-5" x="890.44" y="269" width="316.41" height="13.5" />
+        <rect class="cls-5" x="331.78" y="314.18" width="398.87" height="13.5" />
+        <rect class="cls-6" x="774.28" y="314.18" width="321.83" height="13.5" />
+        <rect class="cls-5" x="331.78" y="353.85" width="316.41" height="13.5" />
+        <rect class="cls-5" x="663.66" y="353.85" width="316.41" height="13.5" />
+        <rect class="cls-5" x="331.78" y="397.68" width="199.43" height="13.5" />
+        <rect class="cls-4" x="331.78" y="535.43" width="398.87" height="13.5" />
+        <rect class="cls-6" x="331.78" y="575.1" width="316.41" height="13.5" />
+        <rect class="cls-5" x="663.66" y="575.1" width="316.41" height="13.5" />
+        <rect class="cls-5" x="995.53" y="575.1" width="139.22" height="13.5" />
+        <rect class="cls-5" x="331.78" y="618.93" width="132.62" height="13.5" />
+        <rect class="cls-5" x="486.66" y="618.93" width="132.62" height="13.5" />
+        <rect class="cls-5" x="641.53" y="618.93" width="132.62" height="13.5" />
+        <rect class="cls-5" x="331.78" y="659.97" width="462.17" height="13.5" />
+        <rect class="cls-6" x="331.78" y="699.64" width="316.41" height="13.5" />
+        <rect class="cls-4" x="663.66" y="699.64" width="316.41" height="13.5" />
+        <rect class="cls-5" x="622.48" y="745.02" width="243.97" height="10.41" />
+        <rect class="cls-5" x="331.78" y="743.47" width="265.25" height="13.5" />
+        <rect class="cls-5" x="890.44" y="744.69" width="316.41" height="13.5" />
+        <rect class="cls-5" x="331.78" y="789.87" width="398.87" height="13.5" />
+        <rect class="cls-6" x="774.28" y="789.87" width="321.83" height="13.5" />
+        <rect class="cls-5" x="331.78" y="829.54" width="316.41" height="13.5" />
+        <rect class="cls-5" x="663.66" y="829.54" width="316.41" height="13.5" />
+        <rect class="cls-5" x="331.78" y="873.37" width="199.43" height="13.5" />
+        <rect class="cls-5" x="331.78" y="1011.12" width="398.87" height="13.5" />
+        <rect class="cls-6" x="331.78" y="1050.79" width="316.41" height="13.5" />
+        <rect class="cls-5" x="663.66" y="1050.79" width="316.41" height="13.5" />
+        <rect class="cls-5" x="995.53" y="1050.79" width="139.22" height="13.5" />
+        <rect class="cls-5" x="331.78" y="1094.63" width="132.62" height="13.49" />
+        <rect class="cls-4" x="486.66" y="1094.63" width="132.62" height="13.49" />
+        <rect class="cls-5" x="641.53" y="1094.63" width="132.62" height="13.49" />
+        <rect class="cls-5" x="331.78" y="1138.34" width="398.87" height="13.5" />
+        <rect class="cls-5" x="331.78" y="1178.01" width="316.41" height="13.5" />
+        <rect class="cls-5" x="663.66" y="1178.01" width="316.41" height="13.5" />
+        <rect class="cls-4" x="995.53" y="1178.01" width="139.22" height="13.5" />
+        <rect class="cls-5" x="331.78" y="1221.85" width="132.62" height="13.49" />
+    </g>
+</svg>
