@@ -6,6 +6,7 @@
                 $('.guide-text-container').animate({
                     opacity: 0,
                 }, 100);
+                $('#macbook').css('cursor', 'default');
                 $('#macbook .open-lid').animate({
                     opacity: 1,
                 }, 250);
