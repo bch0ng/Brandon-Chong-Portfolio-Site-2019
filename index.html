@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Brandon Chong</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -15,65 +16,99 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 <body>
+    <div class="guide-text-container container-fluid position-absolute d-none d-sm-block text-center">
+        <h1 class="display-2 guide-text">Press Here to Open</h1>
+    </div>
+
     <svg id="macbook" class="d-none d-sm-block" data-name="macbook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2378.76 1470.61">
         <defs>
             <style>
-                .cls-1 {
+                .closed-cls-1 {
                     fill: #bfbebe;
                 }
     
-                .cls-2 {
+                .closed-cls-2 {
                     fill: #e7e7e7;
                 }
     
-                .cls-3 {
+                .closed-cls-3 {
+                    fill: none;
+                    stroke: #bfbebe;
+                    stroke-miterlimit: 10;
+                    stroke-width: 5px;
+                }
+                .open-cls-1 {
+                    fill: #bfbebe;
+                }
+                .open-cls-2 {
+                    fill: #e7e7e7;
+                }
+                .open-cls-3 {
                     fill: #181818;
                 }
-    
-                .cls-4 {
+                .open-cls-4 {
                     fill: #d04899;
                 }
-    
-                .cls-5 {
+                .open-cls-5 {
                     fill: #fff;
                 }
-    
-                .cls-6 {
+                .open-cls-6 {
                     fill: #5684c3;
                 }
             </style>
         </defs>
         <g id="laptop">
-            <rect x="216.28" y="73.02" width="1884.94" height="1275.85" rx="64" ry="64" />
-            <path class="cls-1" d="M20.38,1381.8s-5,23.33,149.28,23.33H2221.22s79.68.61,93.2-22.85V1352.5H20.24Z" />
-            <rect class="cls-2" x="20.73" y="1337.32" width="2294.14" height="44.95" />
-            <rect class="cls-3" x="271.43" y="131.94" width="1774.65" height="1158.74" />
-            <path class="cls-1" d="M1372.62,1348.56a11.24,11.24,0,0,1-11.24,11.24H974.22A11.24,11.24,0,0,1,963,1348.56h0a11.24,11.24,0,0,1,11.24-11.24h387.17a11.24,11.24,0,0,1,11.24,11.24Z"
-            />
+            <svg class="open-lid" data-name="Open Lid" xmlns="http://www.w3.org/2000/svg">
+                <rect x="216.28" y="73.02" width="1884.94" height="1275.85" rx="64" ry="64" />
+                <rect class="open-cls-3" x="271.43" y="131.94" width="1774.65" height="1158.74" />
+                <svg id="program_code" data-name="program code" xmlns="http://www.w3.org/2000/svg" x="100" y="0" width="1774.65" height="1200" viewbox="0 0 1774.65 1158.74"></svg>
+            </svg>
+            <path class="open-cls-1" d="M20.38,1381.8s-5,23.33,149.28,23.33H2221.22s79.68.61,93.2-22.85V1352.5H20.24Z" />
+            <rect class="open-cls-2" x="20.73" y="1337.32" width="2294.14" height="44.95" />
+            <path class="open-cls-1" d="M1372.62,1348.56a11.24,11.24,0,0,1-11.24,11.24H974.22A11.24,11.24,0,0,1,963,1348.56h0a11.24,11.24,0,0,1,11.24-11.24h387.17a11.24,11.24,0,0,1,11.24,11.24Z" />
+            <svg class="closed-lid" data-name="Closed Lid" xmlns="http://www.w3.org/2000/svg">
+                <polygon class="closed-cls-2" points="2315.13 1363.13 2315.15 1367.33 2315.13 1367.33 2315.13 1363.13" />
+                <rect class="closed-cls-2" x="2314.68" y="1367.33" width="0.45" height="14.71" />
+                <path class="closed-cls-2" d="M2315.13,1363.14v4.19h-.45v-15H1372.16a11,11,0,0,0,.72-4,10.19,10.19,0,0,0-.07-1.24h942.24Z" />
+                <polygon class="closed-cls-2" points="2315.13 1347.09 2315.13 1363.13 2315.05 1347.09 2315.13 1347.09" />
+                <path class="closed-cls-2" d="M2315.13,1337.09v10h-.08l0-9.06a2.41,2.41,0,0,0-.07-.94Z" />
+                <path class="closed-cls-2" d="M2315,1338l0,9.06H1372.81a11.23,11.23,0,0,0-11.16-10h953.29A2.41,2.41,0,0,1,2315,1338Z" />
+                <path class="closed-cls-2" d="M2314.94,1337.09H21.26c14.3-23,92.91-22.38,92.91-22.38H2165.73C2301.35,1314.71,2313.89,1332.72,2314.94,1337.09Z" />
+                <rect class="closed-cls-2" x="20.99" y="1367.33" width="2293.69" height="14.71" />
+                <path class="closed-cls-2" d="M1372.81,1347.09H963.31a11.23,11.23,0,0,1,11.17-10h387.17A11.23,11.23,0,0,1,1372.81,1347.09Z" />
+                <path class="closed-cls-1" d="M964,1352.28h408.2a11.22,11.22,0,0,1-10.51,7.29H974.48A11.23,11.23,0,0,1,964,1352.28Z" />
+                <path class="closed-cls-2" d="M21.26,1337.09H974.48a11.23,11.23,0,0,0-11.17,10H21v-9.55Z" />
+                <path class="closed-cls-2" d="M964,1352.28H21v-5.19H963.31a10.19,10.19,0,0,0-.07,1.24A11,11,0,0,0,964,1352.28Z" />
+                <path class="closed-cls-2" d="M21.26,1337.09l-.27.45v-.45Z" />
+                <path class="closed-cls-2" d="M21,1347.09v5.19h0v-5.19Z" />
+                <polyline class="closed-cls-3" points="2315.13 1347.09 2315.05 1347.09 1372.81 1347.09 963.31 1347.09 20.99 1347.09" />
+            </svg>
         </g>
-        <svg id="program_code" data-name="program code" xmlns="http://www.w3.org/2000/svg" x="100" y="0" width="1774.65" height="1200" viewbox="0 0 1774.65 1158.74"></svg>
+        
+    </svg>
+
+    <svg id="phone" class="d-block d-sm-none" data-name="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 501.62 855.65">
+        <defs>
+            <style>
+                .mobile-cls-1{
+                    fill: #e4e4e4;
+                }
+                .mobile-cls-3{
+                    fill: #d2d2d2;
+                }
+            </style>
+        </defs>
+        <path class="mobile-cls-1" d="M467.91,787.57c0,17.52-13.54,31.71-30.24,31.71H66.3c-16.7,0-30.24-14.2-30.24-31.71V67c0-17.51,13.54-31.71,30.24-31.71H437.67c16.7,0,30.24,14.2,30.24,31.71Z"
+        />
+        <rect class="cls-3" x="55.13" y="100.3" width="390.61" height="603.76" />
+        <path class="mobile-cls-3" d="M296.8,760.28a19.67,19.67,0,0,1-19.67,19.67h-56.2a19.67,19.67,0,0,1-19.67-19.67h0a19.67,19.67,0,0,1,19.67-19.67h56.2a19.67,19.67,0,0,1,19.67,19.67Z"
+        />
+        <circle class="cls-3" cx="243.94" cy="70.38" r="15.46" />
+        <svg id="program_code_mobile" data-name="program code" x="0" y="0" width="390.61" height="603.76" viewBox="0 0 390.61 603.76"></svg>
     </svg>
 
 
-        <svg id="phone" class="d-block d-sm-none" data-name="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 501.62 855.65">
-            <defs>
-                <style>
-                    .cls-1-mobile {
-                        fill: #e4e4e4;
-                    }
-                    .cls-3-mobile {
-                        fill: #d2d2d2;
-                    }
-                </style>
-            </defs>
-            <path class="cls-1-mobile" d="M467.91,787.57c0,17.52-13.54,31.71-30.24,31.71H66.3c-16.7,0-30.24-14.2-30.24-31.71V67c0-17.51,13.54-31.71,30.24-31.71H437.67c16.7,0,30.24,14.2,30.24,31.71Z"
-            />
-            <rect class="cls-3" x="55.13" y="100.3" width="390.61" height="603.76" />
-            <path class="cls-3-mobile" d="M296.8,760.28a19.67,19.67,0,0,1-19.67,19.67h-56.2a19.67,19.67,0,0,1-19.67-19.67h0a19.67,19.67,0,0,1,19.67-19.67h56.2a19.67,19.67,0,0,1,19.67,19.67Z"
-            />
-            <circle class="cls-3" cx="243.94" cy="70.38" r="15.46" />
-            <svg id="program_code_mobile" data-name="program code" x="0" y="0" width="390.61" height="603.76" viewBox="0 0 390.61 603.76"></svg>
-        </svg>
+    
     <!-- Scripts -->
     <script type="text/javascript" src="functions.js"></script>
 </body>

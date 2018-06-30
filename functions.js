@@ -1,10 +1,22 @@
 (function() {
     $(window).on('load', function() {
         if ($(window).width() >= 768) {
-            codeLinesMacbook();  
+            $('#macbook').one('click', function() {
+                $('#macbook .closed-lid').css('opacity', 0);
+                $('.guide-text-container').animate({
+                    opacity: 0,
+                }, 100);
+                $('#macbook .open-lid').animate({
+                    opacity: 1,
+                }, 250);
+                setTimeout(() => {
+                    codeLinesMacbook();
+                }, 400);
+            });  
         } else {
             codeLinesPhone();
         }
+
     });
 
     function codeLinesMacbook() {
@@ -37,7 +49,7 @@
             } else {
                 d3.select('#macbook #program_code').append('rect')
                     .attr('id', 'line_' + i)
-                    .attr('class', 'cls-' + classType)
+                    .attr('class', 'open-cls-' + classType)
                     .attr('x', x)
                     .attr('y', y)
                     .attr('rx', 6)
