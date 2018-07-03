@@ -15,6 +15,11 @@
                 }, 400);
             });  
         } else {
+            $("div.box").on("swipe", swipeHandler);
+
+            function swipeHandler(event) {
+                $(event.target).addClass("swipe");
+            }
             codeLinesPhone();
         }
 
@@ -96,7 +101,7 @@
             } else {
                 d3.select('#phone #program_code_mobile').append('rect')
                     .attr('id', 'line_' + i)
-                    .attr('class', 'cls-' + classType)
+                    .attr('class', 'open-cls-' + classType)
                     .attr('x', x)
                     .attr('y', y)
                     .attr('rx', 6)

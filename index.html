@@ -16,11 +16,12 @@
     <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 <body>
-    <div class="guide-text-container container-fluid position-absolute d-none d-sm-block text-center">
-        <h1 class="display-2 guide-text">Press Here to Open</h1>
-    </div>
+    <div class="guide-text-container container-fluid position-absolute text-center">
 
-    <svg id="macbook" class="d-none d-sm-block" data-name="macbook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2378.76 1470.61">
+        <h3 class="display-3 guide-text d-block d-sm-none">Slide<br />to<br />Unlock</h3>
+    </div>
+<div class="container-fluid">
+    <svg id="macbook" class="d-none d-sm-block" data-name="macbook" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 2378.76 1470.61">
         <defs>
             <style>
                 .closed-cls-1 {
@@ -61,7 +62,7 @@
             <svg class="open-lid" data-name="Open Lid" xmlns="http://www.w3.org/2000/svg">
                 <rect x="216.28" y="73.02" width="1884.94" height="1275.85" rx="64" ry="64" />
                 <rect class="open-cls-3" x="271.43" y="131.94" width="1774.65" height="1158.74" />
-                <svg id="program_code" data-name="program code" xmlns="http://www.w3.org/2000/svg" x="100" y="0" width="1774.65" height="1200" viewbox="0 0 1774.65 1158.74"></svg>
+                <svg id="program_code" data-name="program code" xmlns="http://www.w3.org/2000/svg"></svg>
             </svg>
             <path class="open-cls-1" d="M20.38,1381.8s-5,23.33,149.28,23.33H2221.22s79.68.61,93.2-22.85V1352.5H20.24Z" />
             <rect class="open-cls-2" x="20.73" y="1337.32" width="2294.14" height="44.95" />
@@ -84,9 +85,11 @@
                 <polyline class="closed-cls-3" points="2315.13 1347.09 2315.05 1347.09 1372.81 1347.09 963.31 1347.09 20.99 1347.09" />
             </svg>
         </g>
-        
+        <svg x="271.43" y="131.94" width="1774.65" height="1158.74">
+            <text class="display-2 guide-text d-none d-sm-block mx-auto" >Press Here to Open</text>
+        </svg>
     </svg>
-
+</div>
     <svg id="phone" class="d-block d-sm-none" data-name="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 501.62 855.65">
         <defs>
             <style>
