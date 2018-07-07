@@ -1,4 +1,6 @@
 (function() {
+    var swiped = 0;
+    
     $(window).on('load', function() {
         if ($(window).width() >= 768) {
             $('#macbook #laptop-body').one('click', function() {
@@ -76,48 +78,51 @@
     }
 
     function codeLinesPhone() {
-        var xStart = 88.57;
-        var xMax = 300;
-        var yStart = 162.04;
-        var yMax = 610;
-        var xGap = 15.47;
-        var yGap = 26.17;
-        var x = xStart;
-        var y = yStart;
-        var newLine = 0;
-        var paragraph = 0;
-        var i = 0;
+        if (!swiped) {
+            var xStart = 88.57;
+            var xMax = 300;
+            var yStart = 162.04;
+            var yMax = 610;
+            var xGap = 15.47;
+            var yGap = 26.17;
+            var x = xStart;
+            var y = yStart;
+            var newLine = 0;
+            var paragraph = 0;
+            var i = 0;
 
-        while (paragraph < 3) {
-            var lineLength = Math.round((Math.random() * 100 + 50) * 100) / 100;
-            var classType = Math.floor(Math.random() * 3) + 4;
+            while (paragraph < 3) {
+                var lineLength = Math.round((Math.random() * 100 + 50) * 100) / 100;
+                var classType = Math.floor(Math.random() * 3) + 4;
 
-            if ((x + lineLength) >= xMax) {
-                x = xStart;
-                if (newLine < 4) {
-                    newLine++;
-                    y += yGap;
+                if ((x + lineLength) >= xMax) {
+                    x = xStart;
+                    if (newLine < 4) {
+                        newLine++;
+                        y += yGap;
+                    } else {
+                        newLine = 0;
+                        paragraph++;
+                        y += 50;
+                    }
                 } else {
-                    newLine = 0;
-                    paragraph++;
-                    y += 50;
+                    d3.select('#phone #program_code_mobile').append('rect')
+                        .attr('id', 'line_' + i)
+                        .attr('class', 'open-cls-' + classType)
+                        .attr('x', x)
+                        .attr('y', y)
+                        .attr('rx', 6)
+                        .attr('ry', 6)
+                        .attr('width', 0)
+                        .attr('height', 13.5);
+                    x += lineLength + xGap;
                 }
-            } else {
-                d3.select('#phone #program_code_mobile').append('rect')
-                    .attr('id', 'line_' + i)
-                    .attr('class', 'open-cls-' + classType)
-                    .attr('x', x)
-                    .attr('y', y)
-                    .attr('rx', 6)
-                    .attr('ry', 6)
-                    .attr('width', 0)
-                    .attr('height', 13.5);
-                x += lineLength + xGap;
+                $('#phone #program_code_mobile #line_' + i).delay(i * 30).animate({
+                    width: lineLength,
+                }, 20);
+                i++;
             }
-            $('#phone #program_code_mobile #line_' + i).delay(i * 30).animate({
-                width: lineLength,
-            }, 20);
-            i++;
         }
+        swiped = true;
     }
 })();
