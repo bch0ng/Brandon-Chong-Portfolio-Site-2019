@@ -37,6 +37,7 @@ svg {
 .guide-text {
     opacity: 0.8;
     font-weight: 100;
+    font-size: 4rem;
     animation: colorChange ease-in-out 2s alternate infinite;
 }
 
@@ -55,16 +56,12 @@ svg {
 }
 
 /* Mobile and Tablets */
-@media only screen and (min-device-width: 768px) {
+@media only screen and (max-device-width: 768px) {
     div.guide-text-container.container-fluid {
         padding: 0 !important;
         margin-left: -15px !important;
     }
     .guide-text-container {
-        bottom: calc(500px - 10vw);
+        bottom: calc(300px - 10vw);
     }
-}
-
-.test {
-    background-color: #1ec7e6 !important;
 }

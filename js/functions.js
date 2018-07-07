@@ -1,21 +1,40 @@
 (function() {
-    var swiped = 0;
-    
+    var swiped = false;
+    var open = false;
+
     $(window).on('load', function() {
         if ($(window).width() >= 768) {
-            $('#macbook #laptop-body').one('click', function() {
-                $('#macbook .closed-lid').css('opacity', 0);
-                $('.guide-text-container').animate({
-                    opacity: 0,
-                }, 100);
-                $('#macbook #laptop-body').css('cursor', 'default');
-                $('#macbook .open-lid').animate({
-                    opacity: 1,
-                }, 250);
-                setTimeout(() => {
-                    codeLinesMacbook();
-                }, 400);
+            $('#macbook #laptop-body').on('click', function() {
+                if (!open) {
+                    $('#macbook .closed-lid').css('opacity', 0);
+                    $('.guide-text-container').animate({
+                        opacity: 0,
+                    }, 100).hide();
+                    $('#macbook #laptop-body').css('cursor', 'default');
+                    $('#macbook .close-bar').css('cursor', 'pointer');
+                    $('#macbook .open-lid').animate({
+                        opacity: 1,
+                    }, 250);
+                    setTimeout(() => {
+                        codeLinesMacbook();
+                    }, 400);
+                }
             });  
+            $('#macbook .open-lid').on('click', function () {
+                $('#macbook #laptop-body').css('cursor', 'pointer');
+                $('#macbook .close-bar').css('cursor', 'default');
+                $('#macbook .open-lid').animate({
+                    opacity: 0,
+                }, 150);
+                $('#macbook .closed-lid').animate({
+                    opacity: 1
+                }, 100);
+                $('.guide-text-container').animate({
+                    opacity: 1,
+                }, 100);
+                $('#macbook #program_code').empty();
+                open = false;
+            });
         } else {
             $("#phone").swipe({
                 swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
@@ -75,6 +94,7 @@
             }, 20);
             i++;
         }
+        open = true;
     }
 
     function codeLinesPhone() {
