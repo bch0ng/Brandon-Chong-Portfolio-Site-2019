@@ -13,14 +13,17 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 <body>
-    <div class="guide-text-container container-fluid position-absolute text-center">
-
-        <h3 class="display-3 guide-text d-block d-sm-none">Slide<br />to<br />Unlock</h3>
-    </div>
-<div class="container-fluid">
+    <div class="container-fluid">
+        <div class="guide-text-container container-fluid position-absolute text-center">
+            <h3 class="display-3 guide-text">
+                <span class="d-none d-sm-block">Press Laptop to Open</span>
+                <span class="d-block d-sm-none">Swipe to<br />Unlock</span>
+            </h3>
+        </div>
     <svg id="macbook" class="d-none d-sm-block" data-name="macbook" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 2378.76 1470.61">
         <defs>
             <style>
@@ -64,6 +67,7 @@
                 <rect class="open-cls-3" x="271.43" y="131.94" width="1774.65" height="1158.74" />
                 <svg id="program_code" data-name="program code" xmlns="http://www.w3.org/2000/svg"></svg>
             </svg>
+        <g id="laptop-body">
             <path class="open-cls-1" d="M20.38,1381.8s-5,23.33,149.28,23.33H2221.22s79.68.61,93.2-22.85V1352.5H20.24Z" />
             <rect class="open-cls-2" x="20.73" y="1337.32" width="2294.14" height="44.95" />
             <path class="open-cls-1" d="M1372.62,1348.56a11.24,11.24,0,0,1-11.24,11.24H974.22A11.24,11.24,0,0,1,963,1348.56h0a11.24,11.24,0,0,1,11.24-11.24h387.17a11.24,11.24,0,0,1,11.24,11.24Z" />
@@ -85,9 +89,7 @@
                 <polyline class="closed-cls-3" points="2315.13 1347.09 2315.05 1347.09 1372.81 1347.09 963.31 1347.09 20.99 1347.09" />
             </svg>
         </g>
-        <svg x="271.43" y="131.94" width="1774.65" height="1158.74">
-            <text class="display-2 guide-text d-none d-sm-block mx-auto" >Press Here to Open</text>
-        </svg>
+        </g>
     </svg>
 </div>
     <svg id="phone" class="d-block d-sm-none" data-name="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 501.62 855.65">
@@ -113,6 +115,6 @@
 
     
     <!-- Scripts -->
-    <script type="text/javascript" src="functions.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
 </body>
 </html>

@@ -15,7 +15,7 @@ svg {
     height: 100%;
     width: 100%
 }
-#macbook {
+#macbook #laptop-body {
     cursor: pointer;
 }
 #macbook,
@@ -32,7 +32,7 @@ svg {
 }
 .guide-text-container {
     z-index: 2;
-    margin-top: 5rem;
+    bottom: calc(350px - 10vw);
 }
 .guide-text {
     opacity: 0.8;
@@ -52,4 +52,19 @@ svg {
         opacity: 0.8;
         color: #1ec7e6;
     }
+}
+
+/* Mobile and Tablets */
+@media only screen and (min-device-width: 768px) {
+    div.guide-text-container.container-fluid {
+        padding: 0 !important;
+        margin-left: -15px !important;
+    }
+    .guide-text-container {
+        bottom: calc(500px - 10vw);
+    }
+}
+
+.test {
+    background-color: #1ec7e6 !important;
 }
