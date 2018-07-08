@@ -20,7 +20,7 @@
                     }, 400);
                 }
             });  
-            $('#macbook .open-lid').on('click', function () {
+            $('#macbook .close-bar').on('click', function () {
                 $('#macbook #laptop-body').css('cursor', 'pointer');
                 $('#macbook .close-bar').css('cursor', 'default');
                 $('#macbook .open-lid').animate({
