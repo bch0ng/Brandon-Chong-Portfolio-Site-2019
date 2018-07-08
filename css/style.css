@@ -33,6 +33,7 @@ svg {
 .guide-text-container {
     z-index: 2;
     bottom: calc(350px - 10vw);
+    right: 0;
 }
 .guide-text {
     opacity: 0.8;
@@ -64,4 +65,8 @@ svg {
     .guide-text-container {
         bottom: calc(300px - 10vw);
     }
+}
+
+.main-header {
+    font-size: 6rem;
 }
