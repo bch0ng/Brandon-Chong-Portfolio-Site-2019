@@ -2,8 +2,24 @@
     var swiped = false;
     var open = false;
 
-    $(window).on('load', function() {
+    $(window).on('load resize', function() {
+        setInterval(function() {
+            $('.eyes path').hide(200);
+            $('.closed-eyes path').show(200);
+            $('.eyes path').delay(200).show(200);
+            $('.closed-eyes path').delay(200).hide(200);
+        }, 5000);
         if ($(window).width() >= 768) {
+            $('#nav > a:first-child').on('click', function() {
+                $('#macbook #program-code').hide();
+                $('#macbook .closed-lid').css('opacity', 0);
+                $('#macbook #laptop-body').css('cursor', 'default');
+                $('#macbook .close-bar').css('cursor', 'pointer');
+                $('#macbook .open-lid').animate({
+                    opacity: 1,
+                }, 250);
+                $('#about-me').show();
+            });
             $('#macbook #laptop-body').on('click', function() {
                 if (!open) {
                     $('#macbook .closed-lid').css('opacity', 0);
@@ -32,10 +48,26 @@
                 $('.guide-text-container').animate({
                     opacity: 1,
                 }, 100);
-                $('#macbook #program_code').empty();
+                $('#macbook #program-code').empty();
                 open = false;
             });
         } else {
+            // Needs to be refactored
+            $('#macbook #laptop-body').css('cursor', 'pointer');
+            $('#macbook .close-bar').css('cursor', 'default');
+            $('#macbook .open-lid').animate({
+                opacity: 0,
+            }, 150);
+            $('#macbook .closed-lid').animate({
+                opacity: 1
+            }, 100);
+            $('.guide-text-container').animate({
+                opacity: 1,
+            }, 100);
+            $('#macbook #program-code').empty();
+            open = false;
+
+
             $("#phone").swipe({
                 swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
                     $('.guide-text-container').animate({
@@ -78,7 +110,7 @@
                     y += 124.25;
                 }
             } else {
-                d3.select('#macbook #program_code').append('rect')
+                d3.select('#macbook #program-code').append('rect')
                     .attr('id', 'line_' + i)
                     .attr('class', 'open-cls-' + classType)
                     .attr('x', x)
@@ -89,7 +121,7 @@
                     .attr('height', 13.5);
                 x += lineLength + xGap;
             }
-            $('#macbook #program_code #line_' + i).delay(i * 30).animate({
+            $('#macbook #program-code #line_' + i).delay(i * 30).animate({
                 width: lineLength,
             }, 20);
             i++;
@@ -126,7 +158,7 @@
                         y += 50;
                     }
                 } else {
-                    d3.select('#phone #program_code_mobile').append('rect')
+                    d3.select('#phone #program-code_mobile').append('rect')
                         .attr('id', 'line_' + i)
                         .attr('class', 'open-cls-' + classType)
                         .attr('x', x)
@@ -137,7 +169,7 @@
                         .attr('height', 13.5);
                     x += lineLength + xGap;
                 }
-                $('#phone #program_code_mobile #line_' + i).delay(i * 30).animate({
+                $('#phone #program-code_mobile #line_' + i).delay(i * 30).animate({
                     width: lineLength,
                 }, 20);
                 i++;

@@ -41,6 +41,27 @@ svg {
     font-size: 4rem;
     animation: colorChange ease-in-out 2s alternate infinite;
 }
+#nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#nav .list-group-item {
+    background-color: transparent !important;
+}
+#about-me {
+    padding: 3rem;
+    display: none;
+    background-color: #fff;
+    min-height: 100%;
+    width: 100%;
+}
+#about-me h1 {
+    font-size: 6rem;
+}
+#about-me p {
+    font-size: 2rem;
+}
 
 @keyframes colorChange {
     0% {
@@ -69,4 +90,7 @@ svg {
 
 .main-header {
     font-size: 6rem;
+}
+.closed-eyes path {
+    display: none;
 }
