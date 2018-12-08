@@ -7,7 +7,14 @@ body {
     padding: 0;
     overflow: hidden
 }
-
+h1.main-header {
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+img {
+    width: 100%;
+}
 svg {
     position: fixed;
     top: 0;

@@ -75,7 +75,7 @@
                     }, 50);
                     setTimeout(() => {
                         codeLinesPhone();
-                    }, 400);
+                    }, 200);
                 }
             });
         }
