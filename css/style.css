@@ -5,7 +5,8 @@ html,
 body {
     margin: 0;
     padding: 0;
-    overflow: hidden
+    overflow: hidden;
+    background-color: #faf9f9;
 }
 h1.main-header {
     font-weight: 100;
@@ -56,6 +57,7 @@ svg {
     animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 #nav .list-group-item {
+    border: none !important;
     border-left: 1px solid rgba(0, 0, 0, .125);
     background-color: transparent !important;
 }
@@ -87,22 +89,18 @@ svg {
     -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+#nav a {
+    color: #404969;
+}
 #nav a:hover {
+    color: #1e1918;
     text-decoration: underline;
 }
 
-@keyframes colorChange {
-    0% {
-        opacity: 0.8;
-        color: #92B901;
-    }
-    50% {
-        opacity: 0.3;
-    }
-    100% {
-        opacity: 0.8;
-        color: #1ec7e6;
-    }
+footer {
+    position: fixed;
+    padding: 15px;
+    bottom: 0;
 }
 
 /* Mobile and Tablets */
