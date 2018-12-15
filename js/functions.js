@@ -1,7 +1,6 @@
 (function() {
     var swiped = false;
     var open = false;
-
     $(window).on('load resize', function() {
         setInterval(function() {
             $('.eyes path').hide(200);

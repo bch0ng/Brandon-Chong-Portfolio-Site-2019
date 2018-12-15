@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,12 @@
     <title>Brandon Chong</title>
     <link rel="icon" type="image/png" href="images/favicon_tie.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/clock.css" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
@@ -16,87 +21,90 @@
     <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
+
 <body>
     <div class="desktop container-fluid d-none d-sm-block">
-            <div class="row">
-                <div class="col-10 col-sm-9 col-lg-10">
-                    <h1 class="main-header">Brandon<br />Chong</h1>
-                </div>
-            <!--
-                <div class="col-2 col-sm-3 col-lg-2">
-                    <div id="nav" class="list-group list-group-flush text-right">
-                        <a href="#" class="list-group-item">About Me</a>
-                        <a href="https://github.com/bch0ng" class="list-group-item">GitHub</a>
-                        <a href="files/Chong" class="list-group-item">Resume</a>
-                    </div>
-                </div>
-            -->
+        <div class="row">
+            <div class="col-10 col-sm-9 col-lg-10">
+                <h1 class="main-header">Brandon<br />Chong</h1>
             </div>
-    <!--
-        <div class="guide-text-container container-fluid position-absolute text-center">
-            <h3 class="display-3 guide-text">
-                <span class="text-right">Press Laptop<br />to Open</span>
-            </h3>
         </div>
-    -->
-<svg id="brandon" data-name="Brandon Chong" xmlns="http://www.w3.org/2000/svg" viewBox="0 -10 525 525">
-    <defs>
-        <style>
-            .me-cls-1  { fill: #c4e3cb; }
-            .me-cls-2  { fill: #616161; }
+    </div>
+    <!-- SVG START -->
+    <!-- This clock was copied from https://cssanimation.rocks/clocks/ -->
+    <div class="clock-container">
+        <article class="clock">
+            <div class="hours-container">
+                <div class="hours"></div>
+            </div>
+            <div class="minutes-container">
+                <div class="minutes"></div>
+            </div>
+            <div class="seconds-container">
+                <div class="seconds"></div>
+            </div>
+        </article>
+    </div>
+    <svg id="brandon" data-name="Brandon Chong" xmlns="http://www.w3.org/2000/svg" viewBox="0 -10 525 525">
+        <defs>
+            <style>
+                .me-cls-1  { fill: #e0fcff; }
+            .me-cls-2  { fill: #404969; }
             .me-cls-3  { fill: #f4d3ab; }
             .me-cls-4  { fill: #eac198; }
             .me-cls-5  { fill: #231d1c; }
             .me-cls-6  { fill: #1e1918; }
             .me-cls-7  { fill: #fff;    }
-            .me-cls-8  { fill: #8aae92; }
-            .me-cls-9  { fill: #f4f9f4; }
+            .me-cls-8  { fill: #bde4f4; }
+            .me-cls-9  { fill: #bde4f4; }
             .me-cls-10 { fill: #f0bebe; }
         </style>
-    </defs>
-    <title>Brandon Chong</title>
-    <path class="me-cls-1" d="M256,317.79,67.54,361.28a53,53,0,0,0-41.06,51.61v81.45A17.65,17.65,0,0,0,44.14,512H467.86a17.65,17.65,0,0,0,17.65-17.65V412.89a53,53,0,0,0-41.06-51.61Z" />
-    <path class="me-cls-2" d="M256.52,607.54c3.35,0,31.51-28.5,31.51-35.21s-21.92-142.58-21.92-142.58l17-40.23s4-8.93-4-8.93H234.25c-7.92,0-5.28,8.93-5.28,8.93l18,40.23S225,564.83,225,572.33,253.17,607.54,256.52,607.54Z" />
-    <rect class="me-cls-3" x="185.38" y="282.48" width="141.24" height="97.1" />
-    <path class="me-cls-4" d="M185.38,282.48v72.06c83.54,10.93,141.24-63.23,141.24-63.23v-8.83H185.38Z" />
-    <path class="me-cls-3" d="M361.93,159.34V105.93H150.07V236.48c0,17.71,8.17,34.25,21.77,44.07l39.25,28.35a46.26,46.26,0,0,0,27.12,8.9h35.58a46.25,46.25,0,0,0,27.12-8.9l39.25-28.35c13.6-9.82,21.77-26.36,21.77-44.07V220.25a22.08,22.08,0,0,0,17.65-21.62V181A22.07,22.07,0,0,0,361.93,159.34Z" />
-    <path class="me-cls-4" d="M204.55,147.16c29.35,5.13,81.79,11.73,157.38,11.73v-53H150.07v53.41A22.08,22.08,0,0,0,132.41,181v17.65a22.07,22.07,0,0,0,17.65,21.63v16.24c0,17.71,8.17,34.25,21.77,44.07l39.25,28.35a46.26,46.26,0,0,0,27.12,8.9h9c-12.89,0-35.18-32.92-46.28-50.7a44,44,0,0,1-6.69-23.36V155.86A8.8,8.8,0,0,1,204.55,147.16Z" />
-    <path class="me-cls-5" d="M247.17,0c-61.79,0-70.62,26.48-70.62,26.48-35.31,0-53,8.83-53,44.14,0,23.72,8.83,97.1,8.83,97.1l17.65,8.83,16.46-61.84s80.65,26.53,186.58,26.53l8.83,35.31,17.65-8.83s8.83-53,8.83-88.28C388.41,26.48,317.79,0,247.17,0Z" />
-    <path class="me-cls-6" d="M176.55,26.48c-35.31,0-53,8.83-53,44.14,0,23.72,8.83,97.1,8.83,97.1l17.65,8.83,16.46-61.84s80.65,26.53,186.58,26.53C229.52,114.76,176.55,53,176.55,26.48Z" />
-    <path class="me-cls-10" d="M256,279.07a66,66,0,0,1-25.19-4.77,6.59,6.59,0,0,1-3.67-9,7.64,7.64,0,0,1,9.77-3.38c11.16,4.66,27,4.66,38.18,0a7.65,7.65,0,0,1,9.77,3.38,6.59,6.59,0,0,1-3.67,9A66.05,66.05,0,0,1,256,279.07Z" />
-    <path class="me-cls-6" d="M241.33,168c2.63,1.58,3.34,4.33,1.58,6.13s-5.29,2-7.93.42c-7.9-4.74-20-7.44-29.19-6.48-3.05.32-6.19-1.35-7-3.73s1-4.57,4-4.89A66.51,66.51,0,0,1,241.33,168Z" />
-    <path class="me-cls-6" d="M289.82,160.46a63.12,63.12,0,0,1,19.91-1.35c3,.32,4.85,2.51,4,4.89s-4,4.05-7,3.73c-9.16-1-21.3,1.73-29.19,6.48-2.63,1.58-6.18,1.39-7.93-.42s-1-4.55,1.58-6.13A63.15,63.15,0,0,1,289.82,160.46Z" />
-    <path class="me-cls-8" d="M95.59,431,41.13,376.58a52.74,52.74,0,0,0-14.65,36.31v81.45A17.65,17.65,0,0,0,44.14,512h61.79V456A35.31,35.31,0,0,0,95.59,431Z" />
-    <path class="me-cls-8" d="M416.41,431l54.46-54.46a52.73,52.73,0,0,1,14.65,36.31v81.45A17.65,17.65,0,0,1,467.86,512H406.07V456A35.3,35.3,0,0,1,416.41,431Z" />
-    <path class="me-cls-9" d="M185.38,309,256,379.59s-28.81,7.2-53.9,34.62a7.26,7.26,0,0,1-12.22-2.33c-7.52-20.67-22.77-62.63-28.62-78.74a8.82,8.82,0,0,1,3.4-10.35Z" />
-    <path class="me-cls-9" d="M326.62,309,256,379.59s28.81,7.2,53.9,34.62a7.26,7.26,0,0,0,12.22-2.33c7.52-20.67,22.77-62.63,28.62-78.74a8.82,8.82,0,0,0-3.4-10.35Z" />
-    <circle class="me-cls-8" cx="313.3" cy="397.38" r="8.83" />
-    <circle class="me-cls-8" cx="198.59" cy="396.9" r="8.83" />
-    <g class="closed-eyes">
-        <path class="me-cls-4" d="M229.52,203H194.21c-4.87,0-8.83-2-8.83-4.51v-9c0-2.49,4-4.51,8.83-4.51h35.31c4.88,0,8.83,2,8.83,4.51v9C238.34,201,234.39,203,229.52,203Z" />
-        <path class="me-cls-4" d="M282.48,203h35.31c4.88,0,8.83-2,8.83-4.51v-9c0-2.49-4-4.51-8.83-4.51H282.48c-4.87,0-8.83,2-8.83,4.51v9C273.65,201,277.61,203,282.48,203Z" />
-    </g>
-    <g class="eyes">
-        <g class="whites">
-            <path class="me-cls-7" d="M229.52,203H194.21c-4.87,0-8.83-2-8.83-4.51v-9c0-2.49,4-4.51,8.83-4.51h35.31c4.88,0,8.83,2,8.83,4.51v9C238.34,201,234.39,203,229.52,203Z" />
-            <path class="me-cls-7" d="M282.48,203h35.31c4.88,0,8.83-2,8.83-4.51v-9c0-2.49-4-4.51-8.83-4.51H282.48c-4.87,0-8.83,2-8.83,4.51v9C273.65,201,277.61,203,282.48,203Z" />
+        </defs>
+        <title>Brandon Chong</title>
+        <path class="me-cls-1" d="M256,317.79,67.54,361.28a53,53,0,0,0-41.06,51.61v81.45A17.65,17.65,0,0,0,44.14,512H467.86a17.65,17.65,0,0,0,17.65-17.65V412.89a53,53,0,0,0-41.06-51.61Z" />
+        <path class="me-cls-2" d="M256.52,607.54c3.35,0,31.51-28.5,31.51-35.21s-21.92-142.58-21.92-142.58l17-40.23s4-8.93-4-8.93H234.25c-7.92,0-5.28,8.93-5.28,8.93l18,40.23S225,564.83,225,572.33,253.17,607.54,256.52,607.54Z" />
+        <rect class="me-cls-3" x="185.38" y="282.48" width="141.24" height="97.1" />
+        <path class="me-cls-4" d="M185.38,282.48v72.06c83.54,10.93,141.24-63.23,141.24-63.23v-8.83H185.38Z" />
+        <path class="me-cls-3" d="M361.93,159.34V105.93H150.07V236.48c0,17.71,8.17,34.25,21.77,44.07l39.25,28.35a46.26,46.26,0,0,0,27.12,8.9h35.58a46.25,46.25,0,0,0,27.12-8.9l39.25-28.35c13.6-9.82,21.77-26.36,21.77-44.07V220.25a22.08,22.08,0,0,0,17.65-21.62V181A22.07,22.07,0,0,0,361.93,159.34Z" />
+        <path class="me-cls-4" d="M204.55,147.16c29.35,5.13,81.79,11.73,157.38,11.73v-53H150.07v53.41A22.08,22.08,0,0,0,132.41,181v17.65a22.07,22.07,0,0,0,17.65,21.63v16.24c0,17.71,8.17,34.25,21.77,44.07l39.25,28.35a46.26,46.26,0,0,0,27.12,8.9h9c-12.89,0-35.18-32.92-46.28-50.7a44,44,0,0,1-6.69-23.36V155.86A8.8,8.8,0,0,1,204.55,147.16Z" />
+        <path class="me-cls-5" d="M247.17,0c-61.79,0-70.62,26.48-70.62,26.48-35.31,0-53,8.83-53,44.14,0,23.72,8.83,97.1,8.83,97.1l17.65,8.83,16.46-61.84s80.65,26.53,186.58,26.53l8.83,35.31,17.65-8.83s8.83-53,8.83-88.28C388.41,26.48,317.79,0,247.17,0Z" />
+        <path class="me-cls-6" d="M176.55,26.48c-35.31,0-53,8.83-53,44.14,0,23.72,8.83,97.1,8.83,97.1l17.65,8.83,16.46-61.84s80.65,26.53,186.58,26.53C229.52,114.76,176.55,53,176.55,26.48Z" />
+        <path class="me-cls-10" d="M256,279.07a66,66,0,0,1-25.19-4.77,6.59,6.59,0,0,1-3.67-9,7.64,7.64,0,0,1,9.77-3.38c11.16,4.66,27,4.66,38.18,0a7.65,7.65,0,0,1,9.77,3.38,6.59,6.59,0,0,1-3.67,9A66.05,66.05,0,0,1,256,279.07Z" />
+        <path class="me-cls-6" d="M241.33,168c2.63,1.58,3.34,4.33,1.58,6.13s-5.29,2-7.93.42c-7.9-4.74-20-7.44-29.19-6.48-3.05.32-6.19-1.35-7-3.73s1-4.57,4-4.89A66.51,66.51,0,0,1,241.33,168Z" />
+        <path class="me-cls-6" d="M289.82,160.46a63.12,63.12,0,0,1,19.91-1.35c3,.32,4.85,2.51,4,4.89s-4,4.05-7,3.73c-9.16-1-21.3,1.73-29.19,6.48-2.63,1.58-6.18,1.39-7.93-.42s-1-4.55,1.58-6.13A63.15,63.15,0,0,1,289.82,160.46Z" />
+        <path class="me-cls-8" d="M95.59,431,41.13,376.58a52.74,52.74,0,0,0-14.65,36.31v81.45A17.65,17.65,0,0,0,44.14,512h61.79V456A35.31,35.31,0,0,0,95.59,431Z" />
+        <path class="me-cls-8" d="M416.41,431l54.46-54.46a52.73,52.73,0,0,1,14.65,36.31v81.45A17.65,17.65,0,0,1,467.86,512H406.07V456A35.3,35.3,0,0,1,416.41,431Z" />
+        <path class="me-cls-9" d="M185.38,309,256,379.59s-28.81,7.2-53.9,34.62a7.26,7.26,0,0,1-12.22-2.33c-7.52-20.67-22.77-62.63-28.62-78.74a8.82,8.82,0,0,1,3.4-10.35Z" />
+        <path class="me-cls-9" d="M326.62,309,256,379.59s28.81,7.2,53.9,34.62a7.26,7.26,0,0,0,12.22-2.33c7.52-20.67,22.77-62.63,28.62-78.74a8.82,8.82,0,0,0-3.4-10.35Z" />
+        <circle class="me-cls-8" cx="313.3" cy="397.38" r="8.83" />
+        <circle class="me-cls-8" cx="198.59" cy="396.9" r="8.83" />
+        <g class="closed-eyes">
+            <path class="me-cls-4" d="M229.52,203H194.21c-4.87,0-8.83-2-8.83-4.51v-9c0-2.49,4-4.51,8.83-4.51h35.31c4.88,0,8.83,2,8.83,4.51v9C238.34,201,234.39,203,229.52,203Z" />
+            <path class="me-cls-4" d="M282.48,203h35.31c4.88,0,8.83-2,8.83-4.51v-9c0-2.49-4-4.51-8.83-4.51H282.48c-4.87,0-8.83,2-8.83,4.51v9C273.65,201,277.61,203,282.48,203Z" />
         </g>
-        <g class="pupils">
-            <path class="me-cls-5" d="M211.86,203h0c-4.85,0-8.83-2.7-8.83-6v-6c0-3.31,4-6,8.83-6h0c4.85,0,8.83,2.7,8.83,6v6C220.69,200.33,216.72,203,211.86,203Z" />
-            <path class="me-cls-5" d="M300.14,203h0c-4.86,0-8.83-2.7-8.83-6v-6c0-3.31,4-6,8.83-6h0c4.86,0,8.83,2.7,8.83,6v6C309,200.33,305,203,300.14,203Z" />
+        <g class="eyes">
+            <g class="whites">
+                <path class="me-cls-7" d="M229.52,203H194.21c-4.87,0-8.83-2-8.83-4.51v-9c0-2.49,4-4.51,8.83-4.51h35.31c4.88,0,8.83,2,8.83,4.51v9C238.34,201,234.39,203,229.52,203Z" />
+                <path class="me-cls-7" d="M282.48,203h35.31c4.88,0,8.83-2,8.83-4.51v-9c0-2.49-4-4.51-8.83-4.51H282.48c-4.87,0-8.83,2-8.83,4.51v9C273.65,201,277.61,203,282.48,203Z" />
+            </g>
+            <g class="pupils">
+                <path class="me-cls-5" d="M211.86,203h0c-4.85,0-8.83-2.7-8.83-6v-6c0-3.31,4-6,8.83-6h0c4.85,0,8.83,2.7,8.83,6v6C220.69,200.33,216.72,203,211.86,203Z" />
+                <path class="me-cls-5" d="M300.14,203h0c-4.86,0-8.83-2.7-8.83-6v-6c0-3.31,4-6,8.83-6h0c4.86,0,8.83,2.7,8.83,6v6C309,200.33,305,203,300.14,203Z" />
+            </g>
         </g>
-    </g>
-</svg>
-<svg class="desk" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 2378.76 1470.61">
-    <defs>
-        <style>
-            .desk-cls-1 { fill: #f3e8cb; }
-        </style>
-    </defs>
-    <rect class="desk-cls-1" x="-200" y="1370" width="3000" height="1500" />
-</svg>
-    <svg id="macbook" class="d-none d-sm-block" data-name="macbook" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 2378.76 1470.61">
+    </svg>
+    <svg class="desk" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 2378.76 1470.61">
         <defs>
+            <style>
+                .desk-cls-1 { fill: #f3e8cb; }
+        </style>
+        </defs>
+        <rect class="desk-cls-1" x="-200" y="1370" width="3000" height="1500" />
+    </svg>
+    <svg id="macbook" class="d-none d-sm-block" data-name="macbook" xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid meet" viewBox="0 0 2378.76 1470.61">
+        <defs>
+
             <style>
                 .closed-cls-1 { fill: #bfbebe; }
                 .closed-cls-2 { fill: #e7e7e7; }
@@ -118,37 +126,70 @@
             <svg class="open-lid" data-name="Open Lid" xmlns="http://www.w3.org/2000/svg">
                 <rect x="216.28" y="73.02" width="1884.94" height="1275.85" rx="64" ry="64" />
                 <rect id="screen" class="open-cls-3" x="271.43" y="131.94" width="1774.65" height="1158.74" />
-                <rect class="close-bar" x="300" y="73.02" width="1750" height="60"/>
+                <rect class="close-bar" x="300" y="73.02" width="1750" height="60" />
                 <svg id="program-code" data-name="program code" xmlns="http://www.w3.org/2000/svg"></svg>
                 <foreignObject x="271.43" y="131.94" width="1774.65" height="1158.74" overflow="auto">
                     <div id="about-me" class="container-fluid">
-                        <h1>About Brandon Chong</h1>
-                        <img src="https://images.pexels.com/photos/1648371/pexels-photo-1648371.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+                        <img class="float-right" src="images/body.jpg" alt="Brandon Chong" />
+                        <div class="container-fluid">
+                            <h1>About Brandon Chong</h1>
+                            <p>Hello world!</p>
+                            <p>My name is Brandon Chong and I am currently a Junior at the University of Washington
+                                pursuing Software
+                                Development.</p>
+                            <p>I expect to graduate by June 2020 with a Bachelor of Science in <a href="https://ischool.uw.edu/programs/informatics"
+                                    target="_blank">Informatics</a>.</p>
 
-                        <p>Hello world!</p>
-                        <p>My name is Brandon Chong and I am currently a Junior at the University of Washington.</p>
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="card-title">Test</div>
-                                        <div class="card-text">Testing</div>
+                            <p>Some hobbies I enjoy in my spare time include:</p>
+                            <ul>
+                                <li>Golf</li>
+                                <li>Tennis</li>
+                                <li>Video games</li>
+                                <li>Napping</li>
+                                <li>Coding</li>
+                            </ul>
+
+                            <p>Some of the technologies I am familiar with are:</p>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-title">Computer Science</div>
+                                            <div class="card-text">
+                                                <ul>
+                                                    <li>Java <i class="fab fa-java"></i></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="card-title">Test</div>
-                                        <div class="card-text">Testing</div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-title">Web Development</div>
+                                            <div class="card-text">
+                                                <ul>
+                                                    <li>HTML <i class="fab fa-html5"></i></li>
+                                                    <li>CSS (Bootstrap, LESS, SASS) <i class="fab fa-css3-alt"></i><i class="fab fa-less"></i><i class="fab fa-sass"></i></li>
+                                                    <li>Javascript (JQuery, NodeJS, ReactJS, d3) <i class="fab fa-js"></i><i class="fab fa-react"></i><i class="fab fa-node-js"></i><i class="fab fa-vuejs"></i></li>
+                                                    <li>PHP (Laravel) <i class="fab fa-php"></i><i class="fab fa-laravel"></i></li>
+                                                    <li>Drupal <i class="fab fa-drupal"></i></li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="card-title">Test</div>
-                                        <div class="card-text">Testing</div>
+                                <div class="col-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="card-title">Data Science</div>
+                                            <div class="card-text">
+                                                <ul>
+                                                    <li>SQL</li>
+                                                    <li>R</li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -156,64 +197,66 @@
                     </div>
                 </foreignObject>
             </svg>
-        <g id="laptop-body">
-            <path class="open-cls-1" d="M20.38,1381.8s-5,23.33,149.28,23.33H2221.22s79.68.61,93.2-22.85V1352.5H20.24Z" />
-            <rect class="open-cls-2" x="20.73" y="1337.32" width="2294.14" height="44.95" />
-            <path class="open-cls-1" d="M1372.62,1348.56a11.24,11.24,0,0,1-11.24,11.24H974.22A11.24,11.24,0,0,1,963,1348.56h0a11.24,11.24,0,0,1,11.24-11.24h387.17a11.24,11.24,0,0,1,11.24,11.24Z" />
-            <svg class="closed-lid" data-name="Closed Lid" xmlns="http://www.w3.org/2000/svg">
-                <polygon class="closed-cls-2" points="2315.13 1363.13 2315.15 1367.33 2315.13 1367.33 2315.13 1363.13" />
-                <rect class="closed-cls-2" x="2314.68" y="1367.33" width="0.45" height="14.71" />
-                <path class="closed-cls-2" d="M2315.13,1363.14v4.19h-.45v-15H1372.16a11,11,0,0,0,.72-4,10.19,10.19,0,0,0-.07-1.24h942.24Z" />
-                <polygon class="closed-cls-2" points="2315.13 1347.09 2315.13 1363.13 2315.05 1347.09 2315.13 1347.09" />
-                <path class="closed-cls-2" d="M2315.13,1337.09v10h-.08l0-9.06a2.41,2.41,0,0,0-.07-.94Z" />
-                <path class="closed-cls-2" d="M2315,1338l0,9.06H1372.81a11.23,11.23,0,0,0-11.16-10h953.29A2.41,2.41,0,0,1,2315,1338Z" />
-                <path class="closed-cls-2" d="M2314.94,1337.09H21.26c14.3-23,92.91-22.38,92.91-22.38H2165.73C2301.35,1314.71,2313.89,1332.72,2314.94,1337.09Z" />
-                <rect class="closed-cls-2" x="20.99" y="1367.33" width="2293.69" height="14.71" />
-                <path class="closed-cls-2" d="M1372.81,1347.09H963.31a11.23,11.23,0,0,1,11.17-10h387.17A11.23,11.23,0,0,1,1372.81,1347.09Z" />
-                <path class="closed-cls-1" d="M964,1352.28h408.2a11.22,11.22,0,0,1-10.51,7.29H974.48A11.23,11.23,0,0,1,964,1352.28Z" />
-                <path class="closed-cls-2" d="M21.26,1337.09H974.48a11.23,11.23,0,0,0-11.17,10H21v-9.55Z" />
-                <path class="closed-cls-2" d="M964,1352.28H21v-5.19H963.31a10.19,10.19,0,0,0-.07,1.24A11,11,0,0,0,964,1352.28Z" />
-                <path class="closed-cls-2" d="M21.26,1337.09l-.27.45v-.45Z" />
-                <path class="closed-cls-2" d="M21,1347.09v5.19h0v-5.19Z" />
-                <polyline class="closed-cls-3" points="2315.13 1347.09 2315.05 1347.09 1372.81 1347.09 963.31 1347.09 20.99 1347.09" />
-            </svg>
-        </g>
+            <g id="laptop-body">
+                <path class="open-cls-1" d="M20.38,1381.8s-5,23.33,149.28,23.33H2221.22s79.68.61,93.2-22.85V1352.5H20.24Z" />
+                <rect class="open-cls-2" x="20.73" y="1337.32" width="2294.14" height="44.95" />
+                <path class="open-cls-1" d="M1372.62,1348.56a11.24,11.24,0,0,1-11.24,11.24H974.22A11.24,11.24,0,0,1,963,1348.56h0a11.24,11.24,0,0,1,11.24-11.24h387.17a11.24,11.24,0,0,1,11.24,11.24Z" />
+                <svg class="closed-lid" data-name="Closed Lid" xmlns="http://www.w3.org/2000/svg">
+                    <polygon class="closed-cls-2" points="2315.13 1363.13 2315.15 1367.33 2315.13 1367.33 2315.13 1363.13" />
+                    <rect class="closed-cls-2" x="2314.68" y="1367.33" width="0.45" height="14.71" />
+                    <path class="closed-cls-2" d="M2315.13,1363.14v4.19h-.45v-15H1372.16a11,11,0,0,0,.72-4,10.19,10.19,0,0,0-.07-1.24h942.24Z" />
+                    <polygon class="closed-cls-2" points="2315.13 1347.09 2315.13 1363.13 2315.05 1347.09 2315.13 1347.09" />
+                    <path class="closed-cls-2" d="M2315.13,1337.09v10h-.08l0-9.06a2.41,2.41,0,0,0-.07-.94Z" />
+                    <path class="closed-cls-2" d="M2315,1338l0,9.06H1372.81a11.23,11.23,0,0,0-11.16-10h953.29A2.41,2.41,0,0,1,2315,1338Z" />
+                    <path class="closed-cls-2" d="M2314.94,1337.09H21.26c14.3-23,92.91-22.38,92.91-22.38H2165.73C2301.35,1314.71,2313.89,1332.72,2314.94,1337.09Z" />
+                    <rect class="closed-cls-2" x="20.99" y="1367.33" width="2293.69" height="14.71" />
+                    <path class="closed-cls-2" d="M1372.81,1347.09H963.31a11.23,11.23,0,0,1,11.17-10h387.17A11.23,11.23,0,0,1,1372.81,1347.09Z" />
+                    <path class="closed-cls-1" d="M964,1352.28h408.2a11.22,11.22,0,0,1-10.51,7.29H974.48A11.23,11.23,0,0,1,964,1352.28Z" />
+                    <path class="closed-cls-2" d="M21.26,1337.09H974.48a11.23,11.23,0,0,0-11.17,10H21v-9.55Z" />
+                    <path class="closed-cls-2" d="M964,1352.28H21v-5.19H963.31a10.19,10.19,0,0,0-.07,1.24A11,11,0,0,0,964,1352.28Z" />
+                    <path class="closed-cls-2" d="M21.26,1337.09l-.27.45v-.45Z" />
+                    <path class="closed-cls-2" d="M21,1347.09v5.19h0v-5.19Z" />
+                    <polyline class="closed-cls-3" points="2315.13 1347.09 2315.05 1347.09 1372.81 1347.09 963.31 1347.09 20.99 1347.09" />
+                </svg>
+            </g>
         </g>
     </svg>
-
-</div>
-<div class="mobile container-fluid d-block d-sm-none">
-    <div class="guide-text-container container-fluid position-absolute text-center">
-        <h3 class="display-3 guide-text">
-            <span>Brandon
-                <br />Chong</span>
-        </h3>
     </div>
-    <svg id="phone" class="d-block d-sm-none" data-name="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 501.62 855.65">
-        <defs>
-            <style>
-                .mobile-cls-1{
+    <div class="mobile container-fluid d-block d-sm-none">
+        <div class="guide-text-container container-fluid position-absolute text-center">
+            <h3 class="display-3 guide-text">
+                <span>Brandon
+                    <br />Chong</span>
+            </h3>
+        </div>
+        <svg id="phone" class="d-block d-sm-none" data-name="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 501.62 855.65">
+            <defs>
+                <style>
+                    .mobile-cls-1{
                     fill: #e4e4e4;
                 }
                 .mobile-cls-3{
                     fill: #d2d2d2;
                 }
             </style>
-        </defs>
-        <path class="mobile-cls-1" d="M467.91,787.57c0,17.52-13.54,31.71-30.24,31.71H66.3c-16.7,0-30.24-14.2-30.24-31.71V67c0-17.51,13.54-31.71,30.24-31.71H437.67c16.7,0,30.24,14.2,30.24,31.71Z" />
-        <rect class="cls-3" x="55.13" y="100.3" width="390.61" height="603.76" />
-        <path class="mobile-cls-3" d="M296.8,760.28a19.67,19.67,0,0,1-19.67,19.67h-56.2a19.67,19.67,0,0,1-19.67-19.67h0a19.67,19.67,0,0,1,19.67-19.67h56.2a19.67,19.67,0,0,1,19.67,19.67Z" />
-        <circle class="cls-3" cx="243.94" cy="70.38" r="15.46" />
-        <svg id="program_code_mobile" data-name="program code" x="0" y="0" width="390.61" height="603.76" viewBox="0 0 390.61 603.76"></svg>
-    </svg>
-</div>
-<div id="nav" class="d-none d-sm-block list-group list-group-flush text-right">
-    <a href="#" class="list-group-item">About Me</a>
-    <a href="https://github.com/bch0ng" class="list-group-item" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/bchonguw/" class="list-group-item" target="_blank">LinkedIn</a>
-    <a href="files/Chong_Resume2018.pdf" class="list-group-item" target="_blank">Resume</a>
-</div>
+            </defs>
+            <path class="mobile-cls-1" d="M467.91,787.57c0,17.52-13.54,31.71-30.24,31.71H66.3c-16.7,0-30.24-14.2-30.24-31.71V67c0-17.51,13.54-31.71,30.24-31.71H437.67c16.7,0,30.24,14.2,30.24,31.71Z" />
+            <rect class="cls-3" x="55.13" y="100.3" width="390.61" height="603.76" />
+            <path class="mobile-cls-3" d="M296.8,760.28a19.67,19.67,0,0,1-19.67,19.67h-56.2a19.67,19.67,0,0,1-19.67-19.67h0a19.67,19.67,0,0,1,19.67-19.67h56.2a19.67,19.67,0,0,1,19.67,19.67Z" />
+            <circle class="cls-3" cx="243.94" cy="70.38" r="15.46" />
+            <svg id="program_code_mobile" data-name="program code" x="0" y="0" width="390.61" height="603.76" viewBox="0 0 390.61 603.76"></svg>
+        </svg>
+    </div>
+    <!-- END OF SVG -->
+    <div id="nav" class="d-none d-sm-block list-group list-group-flush text-left">
+        <a href="#" class="list-group-item"><i class="fas fa-user mr-3"></i><span class="nav-text">About Me</span></a>
+        <a href="https://github.com/bch0ng" class="list-group-item" target="_blank"><i class="fab fa-github-square mr-3"></i><span class="nav-text">GitHub</span></a>
+        <a href="https://www.linkedin.com/in/bchonguw/" class="list-group-item" target="_blank"><i class="fab fa-linkedin mr-3"></i><span class="nav-text">LinkedIn</span></a>
+        <a href="files/Chong_Resume2018.pdf" class="list-group-item" target="_blank"><i class="fas fa-file mr-3"></i><span class="nav-text">Resume</span></a>
+    </div>
     <!-- Scripts -->
     <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/clock.js"></script>
 </body>
+
 </html>
