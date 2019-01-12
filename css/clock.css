@@ -11,7 +11,7 @@
 
 .clock {
     border-radius: 50%;
-    background: #fff url(../svg/ios_clock.svg) no-repeat center;
+    background: #fff url(../svg/clock_face.svg) no-repeat center;
     background-size: 88%;
     height: 10vw;
     padding-bottom: 31%;

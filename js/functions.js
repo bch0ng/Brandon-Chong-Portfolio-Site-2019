@@ -15,7 +15,7 @@
             $('#desktop-container').show();
             // Opens up laptop screen with about page when nav item is clicked
             $('#nav > a:first-child').on('click', function() {
-                $('#laptop-container #program-code').hide();
+                $('#laptop #program-code').hide();
                 $('#laptop-container .closed-lid').css('opacity', 0);
                 $('#laptop-container #laptop-body').css('cursor', 'default');
                 $('#laptop-container .close-bar').css('cursor', 'pointer');
@@ -61,7 +61,7 @@
                 $('.guide-text-container').animate({
                     opacity: 1,
                 }, 100);
-                $('#laptop-container #program-code').empty();
+                $('#laptop #program-code').empty();
                 open = false;
             });
         } else {    // For Mobile
@@ -77,7 +77,7 @@
             $('.guide-text-container').animate({
                 opacity: 1,
             }, 100);
-            $('#laptop-container #program-code').empty();
+            $('#laptop #program-code').empty();
             open = false;
             $('#desktop-container').hide();
             $('#mobile-about-me-container').show();
@@ -208,7 +208,7 @@
                     y += 124.25;
                 }
             } else {
-                d3.select('#laptop-container #program-code').append('rect')
+                d3.select('#laptop #program-code').append('rect')
                     .attr('id', 'line_' + i)
                     .attr('class', 'open-cls-' + classType)
                     .attr('x', x)
@@ -219,7 +219,7 @@
                     .attr('height', 13.5);
                 x += lineLength + xGap;
             }
-            $('#laptop-container #program-code #line_' + i).delay(i * 30).animate({
+            $('#laptop #program-code #line_' + i).delay(i * 30).animate({
                 width: lineLength,
             }, 20);
             i++;
