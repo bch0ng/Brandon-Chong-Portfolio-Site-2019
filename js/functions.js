@@ -80,7 +80,6 @@
             }, 100);
             $('#laptop #program-code').empty();
             open = false;
-            mobileOpenedOnce = true;
             $('#desktop-container').hide();
             $('#mobile-about-me-container').show();
             if ($('#phone-lockscreen').attr("y") < 0) {
@@ -139,6 +138,7 @@
                                     //$('#phone').hide();
                                 }
                             });
+                            mobileOpenedOnce = true;
                         } else {    // Animate phone lockscreen going back down if < 200px dragged (still "locked")
                             $('#phone-lockscreen').animate({
                                 y: 0
