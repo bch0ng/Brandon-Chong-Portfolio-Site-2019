@@ -10,7 +10,8 @@
                 $('.eyes path').delay(200).show(200);
                 $('.closed-eyes path').delay(200).hide(200);
             }, 5000);
-            // Setting up desktop SVG interactions
+            // Setting up desktop SVG interactions and hide mobile content if visible
+            $('.mobile-nav-container-zoomed').hide();
             $('#mobile-about-me').hide();
             $('#desktop-container').show();
             // Opens up laptop screen with about page when nav item is clicked
