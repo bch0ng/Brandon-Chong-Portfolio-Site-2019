@@ -1,7 +1,7 @@
 (function() {
-    var swiped = false;
-    var open = false;
-    var resize = false;
+    let swiped = false;
+    let open = false;
+    let resize = false;
     $(window).on('load resize', function() {
         setInterval(function() {
             $('.eyes path').hide(200);
@@ -34,9 +34,11 @@
                         opacity: 1,
                     }, 250);
                     setTimeout(() => {
-                        $('#desktop-guide-text').addClass('hide-animation');
                         codeLinesMacbook();
                     }, 400);
+                    setTimeout(() => {
+                        $('#desktop-guide-text').addClass('hide-animation');
+                    }, 1500);
                 }
             });  
             $('#macbook .close-bar').on('click', function () {
@@ -176,21 +178,21 @@
     }
 
     function codeLinesMacbook() {
-        var xStart = 331.78;
-        var xMax = 800;
-        var yStart = 184.28;
-        var yMax = 850;
-        var xGap = 15.47;
-        var yGap = 26.17;
-        var x = xStart;
-        var y = yStart;
-        var newLine = 0;
-        var paragraph = 0;
-        var i = 0;
+        let xStart = 331.78;
+        let xMax = 800;
+        let yStart = 184.28;
+        let yMax = 850;
+        let xGap = 15.47;
+        let yGap = 26.17;
+        let x = xStart;
+        let y = yStart;
+        let newLine = 0;
+        let paragraph = 0;
+        let i = 0;
 
         while (paragraph < 3) {
-            var lineLength = Math.round((Math.random() * 100 + 100) * 100) / 100;
-            var classType = Math.floor(Math.random() * 3) + 4;
+            let lineLength = Math.round((Math.random() * 100 + 100) * 100) / 100;
+            let classType = Math.floor(Math.random() * 3) + 4;
 
             if ((x + lineLength) >= xMax) {
                 x = xStart;
