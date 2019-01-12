@@ -59,6 +59,9 @@
                 .me-cls-8  { fill: #bde4f4; }
                 .me-cls-9  { fill: #bde4f4; }
                 .me-cls-10 { fill: #f0bebe; }
+                .cls-11 {
+                font-size: 8px;
+                }
             </style>
         </defs>
         <title>Brandon Chong</title>
@@ -93,6 +96,7 @@
                 <path class="me-cls-5" d="M300.14,203h0c-4.86,0-8.83-2.7-8.83-6v-6c0-3.31,4-6,8.83-6h0c4.86,0,8.83,2.7,8.83,6v6C309,200.33,305,203,300.14,203Z" />
             </g>
         </g>
+        <text class="cls-11" transform="translate(352 337) rotate(13)">© Brandon Chong 2019</text>
     </svg>
     <svg class="desk" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" viewBox="0 0 2378.76 1470.61">
         <defs>
@@ -100,7 +104,7 @@
                 .desk-cls-1 { fill: #f3e8cb; }
         </style>
         </defs>
-        <rect class="desk-cls-1" x="-200" y="1370" width="3000" height="1500" />
+        <rect class="desk-cls-1" x="-5000" y="1370" width="10000" height="1500" />
     </svg>
     <svg id="macbook" class="d-none d-sm-block" data-name="macbook" xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="xMidYMid meet" viewBox="0 0 2378.76 1470.61">
@@ -127,21 +131,26 @@
             <svg class="open-lid" data-name="Open Lid" xmlns="http://www.w3.org/2000/svg">
                 <rect x="216.28" y="73.02" width="1884.94" height="1275.85" rx="64" ry="64" />
                 <rect id="screen" class="open-cls-3" x="271.43" y="131.94" width="1774.65" height="1158.74" />
-                <rect class="close-bar" x="300" y="73.02" width="1750" height="60" />
+                <g class="close-bar">
+                    <rect class="close-bar" x="300" y="73.02" width="1750" height="60" />
+                    <text id="desktop-guide-text" x="1175" y="103.02" class="open-cls-2 close-bar" dominant-baseline="middle" text-anchor="middle">Click to close</text>
+                </g>
                 <svg id="program-code" data-name="program code" xmlns="http://www.w3.org/2000/svg"></svg>
                 <foreignObject x="271.43" y="131.94" width="1774.65" height="1158.74" overflow="auto">
                     <div id="about-me" class="container-fluid">
-                        <!--<img src="images/body.jpg" alt="Brandon Chong" />-->
                         <div>
-                            <h4 class="display-4 text-center py-3">Brandon Chong</h4>
-                            <h4 class="pb-1">About Me</h4>
+                            <figure class="figure float-right">
+                                <img class="figure-img img-fluid" style="width: 500px; height: auto; max-width: 700px; max-height: 700px; border-radius: 0.85rem;" src="images/face.jpg" alt="Brandon Chong" />
+                                <figcaption class="figure-caption text-center"></figcaption>
+                            </figure>
+                            <h1 class="display-1 pb-1">About Me</h1>
                             <p>Hello world!</p>
                             <p>My name is Brandon Chong and I am currently a Junior at the University of Washington
                                 pursuing a career in software
                                 development.</p>
                             <p>I expect to graduate by June 2020 with a Bachelor of Science in <a href="https://ischool.uw.edu/programs/informatics"
                                     target="_blank">Informatics</a>.</p>
-                    
+                        
                             <p>Some hobbies I enjoy in my spare time include:</p>
                             <ul>
                                 <li>Golf</li>
@@ -150,7 +159,7 @@
                                 <li>Napping</li>
                                 <li>Coding</li>
                             </ul>
-                    
+                        
                             <p>Some of the technologies I am familiar with are:</p>
                             <div class="technologies">
                                 <ul>
@@ -168,7 +177,7 @@
                                     <li class="text-center"><i class="fab fa-3x fa-adobe"></i><span>Photoshop</span></li>
                                     <li class="text-center"><i class="fab fa-3x fa-git"></i><span>Git</span></li>
                                     <li class="text-center"><i class="fab fa-3x fa-jira"></i><span>Jira</span></li>
-                                    <li class="text-center"><span class="tech-icon-placeholder-text">SQL</span></li>
+                                    <li class="text-center"><span class="tech-icon-placeholder-text">SQL</span><span>SQL</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -208,7 +217,7 @@
             </h3>
         -->
         <!-- On swipe/unlock: get rid of phone and hand by zooming in and making it look like an app-->
-        <svg id="phone" data-name="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 522.68 800.96">
+        <svg id="phone" data-name="phone" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 522.68 800.96">
             <defs>
                 <style>
                     .cls-1 {
@@ -259,15 +268,18 @@
                     }
                 </style>
                 <clipPath id="clip-phone-bg">
-                    <rect class="cls-7" x="72.4" width="381" height="766.8" fill="#fff" />
+                    <rect class="cls-7" x="72.4" y="0" width="381" height="766.8" fill="#fff" />
+                </clipPath>
+                <clipPath id="clip-about-me-container">
+                    <rect class="cls-7" x="0" y="0" width="500" height="780" fill="#fff" />
                 </clipPath>
             </defs>
             <title>Phone</title>
             <path class="cls-1 phone-hand" d="M33.53,337.83l21.12,5.71a31.06,31.06,0,0,0,36.83-19.38l.14-.4a26,26,0,0,0-18-34.22l-21.12-5.7a31,31,0,0,0-36.84,19.39l-.14.4a26,26,0,0,0,18,34.21Z" />
             <path class="cls-2" d="M458.41,758.23c0,17.37-12.24,31.44-27.38,31.44H95.22c-15.11,0-27.38-14.08-27.38-31.44V43.81c0-17.36,12.24-31.44,27.38-31.44H431.06c15.11,0,27.38,14.08,27.38,31.44Z" />
             <rect class="cls-7" x="72.4" y="17.89" width="381" height="770" rx="20" ry="20" fill="#fff" />
-            <foreignObject x="72.4" y="17.89" width="381" height="770" overflow="auto">
-                <div id="mobile-about-me" class="container-fluid" style="display: none">
+            <foreignObject id="mobile-about-me-container" style="display:none" x="72.4" y="17.89" width="381" height="770" overflow="scroll" clip-path="url(#clip-about-me-container)">
+                <div class="container-fluid">
                     <!--<img src="images/body.jpg" alt="Brandon Chong" />-->
                     <div>
                         <h4 class="display-4 text-center py-3">Brandon Chong</h4>
@@ -305,34 +317,20 @@
                                 <li class="text-center"><i class="fab fa-3x fa-adobe"></i><span>Photoshop</span></li>
                                 <li class="text-center"><i class="fab fa-3x fa-git"></i><span>Git</span></li>
                                 <li class="text-center"><i class="fab fa-3x fa-jira"></i><span>Jira</span></li>
-                                <li class="text-center"><span class="tech-icon-placeholder-text">SQL</span></li>
+                                <li class="text-center"><span class="tech-icon-placeholder-text">SQL</span><span>SQL</span></li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="mobile-nav-container">
-                        <div class="row mobile-nav">
-                            <div class="col-4 mobile-nav-item text-center">
-                                <a href="https://github.com/bch0ng" class="text-center" target="_blank"><i class="fab fa-2x fa-github-square"></i><br /><span
-                                        class="mobile-nav-text">GitHub</span></a>
-                            </div>
-                            <div class="col-4 mobile-nav-item text-center">
-                                <a href="https://www.linkedin.com/in/bchonguw/" class="text-center" target="_blank"><i class="fab fa-2x fa-linkedin"></i><br /><span
-                                        class="mobile-nav-text">LinkedIn</span></a>
-                            </div>
-                            <div class="col-4 mobile-nav-item text-center">
-                                <a href="files/Chong_Resume2018.pdf" class="text-center" target="_blank"><i class="fas fa-2x fa-file-alt"></i><br /><span
-                                        class="mobile-nav-text">Resume</span></a>
-                            </div>
                         </div>
                     </div>
                 </div>
             </foreignObject>
-            <svg data-name="Phone Lockscreen Container" xmlns="http://www.w3.org/2000/svg" x="0" y="17.50" width="500" height="770" rx="20" ry="20">
-                <svg id="phone-lockscreen" data-name="Phone Lockscreen" xmlns="http://www.w3.org/2000/svg">
-                    <image id="phone-bg" y="-50" width="500" xlink:href="images/body.jpg" clip-path="url(#clip-phone-bg)" />
+            <svg data-name="Phone Lockscreen Container" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="17.50" width="500" height="770" rx="20" ry="20">
+                <svg id="phone-lockscreen" data-name="Phone Lockscreen" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!--<rect y="-50" width="500" height="900" fill="#abc123" clip-path="url(#clip-phone-bg)" />-->
+                    <image id="phone-bg" x="0" y="0" width="500" height="900" xlink:href="images/body.jpg" clip-path="url(#clip-phone-bg)" />
                     <text id="mobile-time" class="display-1" x="260" y="100" dominant-baseline="middle" text-anchor="middle"></text>
                     <text id="mobile-date" class="display-1" x="260" y="160" dominant-baseline="middle" text-anchor="middle"></text>
                     <text id="mobile-guide-text" class="display-1" x="260" y="700" dominant-baseline="middle" text-anchor="middle">Swipe up to unlock</text>
+                    <text id="mobile-copyright" x="260" y="750" dominant-baseline="middle" text-anchor="middle">© Brandon Chong 2019</text>
                 </svg>
             </svg> 
             <path class="cls-4" d="M319.74,12.32c-10.23.25-20.93,3.34-30.75.27-9.88,2.14-20.18,3.55-29.27-.22-10.83.92-21.65,2-32.52,2.46-19.78.82-39.58.14-59.37.07a21.73,21.73,0,0,0-.21,2.89c0,16.19,17.6,29.31,39.32,29.31H319.29c21.71,0,39.32-13.1,39.32-29.31A21.78,21.78,0,0,0,358,13C345.28,13,332.52,12,319.74,12.32Z" />
@@ -353,11 +351,51 @@
         <a href="https://www.linkedin.com/in/bchonguw/" class="list-group-item" target="_blank"><i class="fab fa-2x fa-linkedin mr-3"></i><span class="nav-text">LinkedIn</span></a>
         <a href="files/Chong_Resume2018.pdf" class="list-group-item" target="_blank"><i class="fas fa-2x fa-file-alt mr-3" style="width: 28px"></i><span class="nav-text">Resume</span></a>
     </div>
-    <footer>
-        <div id="copyright" class="text-center">
-            <span>&copy; Brandon Chong 2018</span>
+    <div id="mobile-about-me" class="container-fluid" style="display: none;">
+        <!--<img src="images/body.jpg" alt="Brandon Chong" />-->
+        <div>
+            <h4 class="display-4 text-center py-3">Brandon Chong</h4>
+            <h4 class="pb-1">About Me</h4>
+            <p>Hello world!</p>
+            <p>My name is Brandon Chong and I am currently a Junior at the University of Washington
+                pursuing a career in software
+                development.</p>
+            <p>I expect to graduate by June 2020 with a Bachelor of Science in <a href="https://ischool.uw.edu/programs/informatics"
+                    target="_blank">Informatics</a>.</p>
+    
+            <p>Some hobbies I enjoy in my spare time include:</p>
+            <ul>
+                <li>Golf</li>
+                <li>Tennis</li>
+                <li>Video games</li>
+                <li>Napping</li>
+                <li>Coding</li>
+            </ul>
+    
+            <p>Some of the technologies I am familiar with are:</p>
+            <div class="technologies">
+                <ul>
+                    <li class="text-center"><i class="fab fa-3x fa-java"></i><span>Java</span></li>
+                    <li class="text-center"><i class="fab fa-3x fa-html5"></i><span>HTML</span></li>
+                    <li class="text-center"><i class="fab fa-3x fa-css3-alt"></i><span>CSS</span></li>
+                    <li class="text-center"><i class="fab fa-3x fa-sass"></i><span>SASS</span></li>
+                    <li class="text-center"><i class="fab fa-3x fa-js"></i><span>JavaScript</span></li>
+                    <li class="text-center"><i class="fab fa-3x fa-react"></i><span>React</span></li>
+                    <li class="text-center"><i class="fab fa-3x fa-node-js"></i><span>Node</span></li>
+                    <li class="text-center"><i class="fab fa-3x fa-php"></i><span>PHP</span></li>
+                    <li class="text-center"><i class="fab fa-3x fa-laravel"></i><span>Laravel</span></li>
+                    <li class="text-center"><i class="fab fa-3x fa-drupal"></i><span>Drupal</span></li>
+                    <li class="text-center"><i class="fab fa-3x fa-adobe"></i><span>Illustrator</span></li>
+                    <li class="text-center"><i class="fab fa-3x fa-adobe"></i><span>Photoshop</span></li>
+                    <li class="text-center"><i class="fab fa-3x fa-git"></i><span>Git</span></li>
+                    <li class="text-center"><i class="fab fa-3x fa-jira"></i><span>Jira</span></li>
+                    <li class="text-center"><span class="tech-icon-placeholder-text">SQL</span><span>SQL</span></li>
+                </ul>
+            </div>
         </div>
-        <div style="display:none" class="mobile-nav-container-zoomed d-lg-none">
+    </div>
+    <footer>
+        <div style="display:none" class="mobile-nav-container-zoomed d-md-none">
             <div class="row mobile-nav">
                 <div class="col-4 mobile-nav-item text-center">
                     <a href="https://github.com/bch0ng" class="text-center" target="_blank"><i class="fab fa-2x fa-github-square"></i><br /><span

@@ -1,6 +1,7 @@
 (function() {
     var swiped = false;
     var open = false;
+    var resize = false;
     $(window).on('load resize', function() {
         setInterval(function() {
             $('.eyes path').hide(200);
@@ -8,7 +9,8 @@
             $('.eyes path').delay(200).show(200);
             $('.closed-eyes path').delay(200).hide(200);
         }, 5000);
-        if ($(window).width() >= 768) {
+        if ($(window).width() >= 568) {
+            $('#mobile-about-me').hide();
             $('#desktop-container').show();
             $('#nav > a:first-child').on('click', function() {
                 $('#macbook #program-code').hide();
@@ -32,6 +34,7 @@
                         opacity: 1,
                     }, 250);
                     setTimeout(() => {
+                        $('#desktop-guide-text').addClass('hide-animation');
                         codeLinesMacbook();
                     }, 400);
                 }
@@ -68,8 +71,10 @@
             open = false;
 
             $('#desktop-container').hide();
-            $('#mobile-about-me').show();
-
+            $('#mobile-about-me-container').show();
+            if ($('#phone-lockscreen').attr("y") < 0) {
+                $('#mobile-about-me').show();
+            }
 
             let delaySeconds = (new Date()).getSeconds();
             // Init mobile time
@@ -95,8 +100,8 @@
                             $('#phone').addClass("scale-up-center");
                             $('#copyright').addClass("slide-bottom");
                             setTimeout(() => {
-                                $('.mobile-nav-container').hide();
-                                $('.mobile-nav-container-zoomed').show();
+                                $('#mobile-about-me').show();
+                                $('.mobile-nav-container-zoomed').slideDown();
                             }, 150);
                             $('.phone-hand').addClass("hide-animation");
                             $('#phone-lockscreen').animate({
@@ -106,6 +111,13 @@
                                 step: function (now) {
                                     $('#phone-lockscreen').attr("y", now);
                                     //$('#phone').addClass("scale-up-center");
+                                },
+                                complete: function() {
+                                    $('#phone').addClass("hide-animation");
+                                    setTimeout(() => {
+                                        $('#phone').hide();
+                                    }, 100);
+                                    //$('#phone').hide();
                                 }
                             });
                         } else {    // Animate phone lockscreen going back down (still locked)

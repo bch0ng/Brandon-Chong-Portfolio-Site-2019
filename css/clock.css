@@ -1,6 +1,6 @@
 /* This clock was copied from https: //cssanimation.rocks/clocks/ */
 .clock-container {
-    position: absolute;
+    position: fixed;
     right: 15%;
     top: 15%;
     background: rgba(200, 200, 200, 0.9);
@@ -13,10 +13,10 @@
     border-radius: 50%;
     background: #fff url(../svg/ios_clock.svg) no-repeat center;
     background-size: 88%;
-    height: 10em;
+    height: 10vw;
     padding-bottom: 31%;
     position: relative;
-    width: 10em;
+    width: 10vw;
 }
 
 .clock:after {

@@ -12,6 +12,11 @@ h1.main-header {
     font-weight: 100;
     text-transform: uppercase;
     font-size: 6.5vw;
+    margin-bottom: 0;
+    position: fixed;
+}
+#copyright {
+    font-size: 0.9rem;
 }
 img {
     width: 100%;
@@ -29,7 +34,7 @@ svg {
 #macbook,
 #macbook .closed-lid,
 #macbook .open-lid {
-    position: absolute;
+    position: fixed;
 }
 #macbook .open-lid {
     opacity: 0;
@@ -39,7 +44,7 @@ svg {
     z-index: 1;
 }
 #nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     -webkit-animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -49,6 +54,9 @@ svg {
     border: none !important;
     border-left: 1px solid rgba(0, 0, 0, .125);
     background-color: transparent !important;
+}
+#nav .list-group-item i {
+    background: #faf9f9;
 }
 #about-me {
     padding: 3rem;
@@ -93,6 +101,7 @@ svg {
 .technologies>ul {
     display: flex;
     padding-inline-start: 0;
+    padding-left: 0;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -107,7 +116,8 @@ svg {
 }
 
 .tech-icon-placeholder-text {
-    font-size: 1rem;
+    line-height: 6rem;
+    font-size: 3rem;
     font-weight: 700;
 }
 
@@ -125,6 +135,10 @@ footer {
     }
 }
 @media only screen and (max-device-width: 768px) {
+    #mobile-copyright {
+        fill: #fff;
+        opacity: 0.5;
+    }
     div.guide-text-container.container-fluid {
         padding: 0 !important;
         margin-left: -15px !important;
@@ -147,18 +161,27 @@ footer {
         fill: #fff;
     }
     #mobile-guide-text {
-        font-weight: 600;
-        font-size: 1.2rem;
-        fill: #000;
+        font-weight: 400;
+        font-size: 1.5rem;
+        fill: #fff;
+        -webkit-animation: opacity-pulsate ease-in-out 1s alternate infinite;
         animation: opacity-pulsate ease-in-out 1s alternate infinite;
     }
     #mobile-about-me {
-        padding-top: 50px;
-        padding-bottom: 150px;
         font-size: 1rem;
+        overflow-y: scroll;
+        height: 100vh;
+        padding-bottom: 100px;
     }
-    #mobile-about-me .display-4 {
+    #mobile-about-me .display-4,
+    #mobile-about-me-container .display-4 {
         font-size: 3rem;
+    }
+    #mobile-about-me-container .display-4 {
+        padding-right: 2px;
+    }
+    #mobile-about-me-container {
+        padding: 65px 2px 0px 2px;
     }
     .mobile-nav-item a {
         color: #404969;
@@ -173,9 +196,10 @@ footer {
         font-size: 0.8rem;
     }
     .mobile-nav-container {
-        position: fixed;
+        position: absolute;
         margin-left: -15px;
         margin-right: -15px;
+        left: 0;
         bottom: 0;
         width: 100%;
         border-top: 1px solid lightgray;
@@ -192,31 +216,72 @@ footer {
         padding: 10px;
         background: #fff;
     }
+    .tech-icon-placeholder-text {
+        line-height: 3rem;
+        font-size: 2rem;
+        font-weight: 700;
+    }
     footer {
         padding-bottom: 5px;
     }
 }
-
-.main-header {
-    font-size: 6rem;
+#desktop-container {
+    overflow: hidden;
+}
+#desktop-guide-text {
+    font-size: 1.5rem;
+}
+.closebar:hover #desktop-guide-text {
+    fill: #fff;
 }
 .closed-eyes path {
     display: none;
 }
 .hide-animation {
+    -webkit-animation: hide-animation 0.1s linear both;
     animation: hide-animation 0.1s linear both;
+}
+@-webkit-keyframes hide-animation {
+    to {
+        opacity: 0;
+        display: none;
+        z-index: -1000;
+    }
 }
 @keyframes hide-animation {
     to {
         opacity: 0;
+        display: none;
+        z-index: -1000;
     }
 }
 .show-animation {
+    -webkit-animation: show-animation 0.1s linear both;
     animation: show-animation 0.1s linear both;
+}
+@-webkit-keyframes show-animation {
+    to {
+        opacity: 1;
+        display: flex;
+    }
 }
 @keyframes show-animation {
     to {
         opacity: 1;
+        display: flex;
+    }
+}
+.opacity-pulsate {
+    -webkit-animation: opacity-pulsate ease-in-out 1s alternate infinite;
+    animation: opacity-pulsate ease-in-out 1s alternate infinite;
+}
+@-webkit-keyframes opacity-pulsate {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
     }
 }
 @keyframes opacity-pulsate {
@@ -430,6 +495,7 @@ footer {
     100% {
         -webkit-transform: translateY(-100%);
         transform: translateY(-100%);
+        display: flex;
     }
 }
 
