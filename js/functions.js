@@ -1,17 +1,19 @@
 (function() {
-    let swiped = false;
-    let open = false;
-    let resize = false;
+    let open = false;   // True if laptop is opened, false otherwise  
+
     $(window).on('load resize', function() {
-        setInterval(function() {
-            $('.eyes path').hide(200);
-            $('.closed-eyes path').show(200);
-            $('.eyes path').delay(200).show(200);
-            $('.closed-eyes path').delay(200).hide(200);
-        }, 5000);
-        if ($(window).width() >= 568) {
+        if ($(window).width() >= 568) {     // For landscape phones, tablets, and desktops
+            // Animation for SVG person blinking; blinks every 5 seconds
+            setInterval(function() {
+                $('.eyes path').hide(200);
+                $('.closed-eyes path').show(200);
+                $('.eyes path').delay(200).show(200);
+                $('.closed-eyes path').delay(200).hide(200);
+            }, 5000);
+            // Setting up desktop SVG interactions
             $('#mobile-about-me').hide();
             $('#desktop-container').show();
+            // Opens up laptop screen with about page when nav item is clicked
             $('#nav > a:first-child').on('click', function() {
                 $('#macbook #program-code').hide();
                 $('#macbook .closed-lid').css('opacity', 0);
@@ -21,7 +23,11 @@
                     opacity: 1,
                 }, 250);
                 $('#about-me').show();
+                setTimeout(() => {
+                    $('#desktop-guide-text').addClass('hide-animation');
+                }, 1500);
             });
+            // Shows a test SVG animation I used If user clicks on macbook to open before clicking About Me
             $('#macbook #laptop-body').on('click', function() {
                 if (!open) {
                     $('#macbook .closed-lid').css('opacity', 0);
@@ -35,12 +41,14 @@
                     }, 250);
                     setTimeout(() => {
                         codeLinesMacbook();
+                        open = true;
                     }, 400);
                     setTimeout(() => {
                         $('#desktop-guide-text').addClass('hide-animation');
                     }, 1500);
                 }
-            });  
+            });
+            // Closes macbook
             $('#macbook .close-bar').on('click', function () {
                 $('#macbook #laptop-body').css('cursor', 'pointer');
                 $('#macbook .close-bar').css('cursor', 'default');
@@ -56,8 +64,8 @@
                 $('#macbook #program-code').empty();
                 open = false;
             });
-        } else {
-            // Needs to be refactored
+        } else {    // For Mobile
+            // Closes and hides non-mobile stuff
             $('#macbook #laptop-body').css('cursor', 'pointer');
             $('#macbook .close-bar').css('cursor', 'default');
             $('#macbook .open-lid').animate({
@@ -71,13 +79,13 @@
             }, 100);
             $('#macbook #program-code').empty();
             open = false;
-
             $('#desktop-container').hide();
             $('#mobile-about-me-container').show();
             if ($('#phone-lockscreen').attr("y") < 0) {
                 $('#mobile-about-me').show();
             }
 
+            // Lockscreen time
             let delaySeconds = (new Date()).getSeconds();
             // Init mobile time
             updatePhoneTime();
@@ -88,17 +96,21 @@
                 }, 60000);
             }, (60 - delaySeconds) * 1000);
 
+            // Lockscreen "slide to unlock" feature
+            // Issue (2019-01-11): Prevents iOS Chrome's pull to refresh
+            //                     because it detects it as a drag event.
             $('#phone-lockscreen').draggable({
                         axis: "y",
                         containment: [0, $('#phone-lockscreen').yMax, 0, 0]
                     })
                     .bind('drag', function (event, ui) {
-                        // Update coordinates manually, since top/left style props don't work on SVG
+                        // Update y-coordinate manually, since top style prop don't work on SVGs
                         $('#mobile-guide-text').hide(100);
                         $('#phone-lockscreen').attr('y', ui.position.top);
                     })
                     .bind('dragstop', function (event, ui) {
-                        if (ui.position.top <= -200) {  // Animate phone lockscreen going up (unlocked)
+                        if (ui.position.top <= -200) {  // Animate phone lockscreen going up if dragged more than 200px (unlocked)
+                            // Animation to make it look like phone screen is filling up the user's screen
                             $('#phone').addClass("scale-up-center");
                             $('#copyright').addClass("slide-bottom");
                             setTimeout(() => {
@@ -122,7 +134,7 @@
                                     //$('#phone').hide();
                                 }
                             });
-                        } else {    // Animate phone lockscreen going back down (still locked)
+                        } else {    // Animate phone lockscreen going back down if < 200px dragged (still "locked")
                             $('#phone-lockscreen').animate({
                                 y: 0
                             },
@@ -140,26 +152,13 @@
                                 }
                             });
                         }
-                    });
-            /*
-            $("#phone-lockscreen").swipe({
-                swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-                    $('.guide-text-container').animate({
-                        opacity: 0,
-                    }, 50);
-                    console.log('swiped!');
-                    $('#phone').addClass("scale-up-center");
-                    $('#phone-lockscreen').addClass("slide-top");
-                    $('.phone-hand').animate({
-                        opacity: 0,
-                    }, 150);
-                }
-            });
-            */
-        }
+                });
+            }
+        });
 
-    });
-
+    /**
+     * Updates the time and date for phone SVG's clock on mobile.
+     */
     function updatePhoneTime() {
         let fullDate = new Date();
         let date = fullDate.toLocaleDateString("en-US", {
@@ -177,10 +176,15 @@
         $('#mobile-time').text(time);
     }
 
+    /**
+     * Test SVG animation made while messing around.
+     * No problem if removed (and all references removed as well),
+     * but kept for fun.
+     */
     function codeLinesMacbook() {
         let xStart = 331.78;
-        let xMax = 800;
         let yStart = 184.28;
+        let xMax = 800;
         let yMax = 850;
         let xGap = 15.47;
         let yGap = 26.17;
@@ -193,7 +197,6 @@
         while (paragraph < 3) {
             let lineLength = Math.round((Math.random() * 100 + 100) * 100) / 100;
             let classType = Math.floor(Math.random() * 3) + 4;
-
             if ((x + lineLength) >= xMax) {
                 x = xStart;
                 if (newLine < 10) {
@@ -221,6 +224,5 @@
             }, 20);
             i++;
         }
-        open = true;
     }
 })();
