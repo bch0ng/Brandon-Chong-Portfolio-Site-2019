@@ -15,11 +15,11 @@
             $('#desktop-container').show();
             // Opens up laptop screen with about page when nav item is clicked
             $('#nav > a:first-child').on('click', function() {
-                $('#macbook #program-code').hide();
-                $('#macbook .closed-lid').css('opacity', 0);
-                $('#macbook #laptop-body').css('cursor', 'default');
-                $('#macbook .close-bar').css('cursor', 'pointer');
-                $('#macbook .open-lid').animate({
+                $('#laptop-container #program-code').hide();
+                $('#laptop-container .closed-lid').css('opacity', 0);
+                $('#laptop-container #laptop-body').css('cursor', 'default');
+                $('#laptop-container .close-bar').css('cursor', 'pointer');
+                $('#laptop-container .open-lid').animate({
                     opacity: 1,
                 }, 250);
                 $('#about-me').show();
@@ -28,15 +28,15 @@
                 }, 1500);
             });
             // Shows a test SVG animation I used If user clicks on macbook to open before clicking About Me
-            $('#macbook #laptop-body').on('click', function() {
+            $('#laptop-container #laptop-body').on('click', function() {
                 if (!open) {
-                    $('#macbook .closed-lid').css('opacity', 0);
+                    $('#laptop-container .closed-lid').css('opacity', 0);
                     $('.guide-text-container').animate({
                         opacity: 0,
                     }, 100).hide();
-                    $('#macbook #laptop-body').css('cursor', 'default');
-                    $('#macbook .close-bar').css('cursor', 'pointer');
-                    $('#macbook .open-lid').animate({
+                    $('#laptop-container #laptop-body').css('cursor', 'default');
+                    $('#laptop-container .close-bar').css('cursor', 'pointer');
+                    $('#laptop-container .open-lid').animate({
                         opacity: 1,
                     }, 250);
                     setTimeout(() => {
@@ -49,35 +49,35 @@
                 }
             });
             // Closes macbook
-            $('#macbook .close-bar').on('click', function () {
-                $('#macbook #laptop-body').css('cursor', 'pointer');
-                $('#macbook .close-bar').css('cursor', 'default');
-                $('#macbook .open-lid').animate({
+            $('#laptop-container .close-bar').on('click', function () {
+                $('#laptop-container #laptop-body').css('cursor', 'pointer');
+                $('#laptop-container .close-bar').css('cursor', 'default');
+                $('#laptop-container .open-lid').animate({
                     opacity: 0,
                 }, 150);
-                $('#macbook .closed-lid').animate({
+                $('#laptop-container .closed-lid').animate({
                     opacity: 1
                 }, 100);
                 $('.guide-text-container').animate({
                     opacity: 1,
                 }, 100);
-                $('#macbook #program-code').empty();
+                $('#laptop-container #program-code').empty();
                 open = false;
             });
         } else {    // For Mobile
             // Closes and hides non-mobile stuff
-            $('#macbook #laptop-body').css('cursor', 'pointer');
-            $('#macbook .close-bar').css('cursor', 'default');
-            $('#macbook .open-lid').animate({
+            $('#laptop-container #laptop-body').css('cursor', 'pointer');
+            $('#laptop-container .close-bar').css('cursor', 'default');
+            $('#laptop-container .open-lid').animate({
                 opacity: 0,
             }, 150);
-            $('#macbook .closed-lid').animate({
+            $('#laptop-container .closed-lid').animate({
                 opacity: 1
             }, 100);
             $('.guide-text-container').animate({
                 opacity: 1,
             }, 100);
-            $('#macbook #program-code').empty();
+            $('#laptop-container #program-code').empty();
             open = false;
             $('#desktop-container').hide();
             $('#mobile-about-me-container').show();
@@ -208,7 +208,7 @@
                     y += 124.25;
                 }
             } else {
-                d3.select('#macbook #program-code').append('rect')
+                d3.select('#laptop-container #program-code').append('rect')
                     .attr('id', 'line_' + i)
                     .attr('class', 'open-cls-' + classType)
                     .attr('x', x)
@@ -219,7 +219,7 @@
                     .attr('height', 13.5);
                 x += lineLength + xGap;
             }
-            $('#macbook #program-code #line_' + i).delay(i * 30).animate({
+            $('#laptop-container #program-code #line_' + i).delay(i * 30).animate({
                 width: lineLength,
             }, 20);
             i++;

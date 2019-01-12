@@ -120,6 +120,10 @@
         z-index: 1;
     }
 
+    #desktop-guide-text {
+        font-size: 1.5rem;
+    }
+    
     .closebar:hover #desktop-guide-text {
         fill: #fff;
     }
