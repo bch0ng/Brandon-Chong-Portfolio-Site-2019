@@ -1,6 +1,6 @@
 (function() {
     let open = false;   // True if laptop is opened, false otherwise  
-
+    let mobileOpenedOnce = false; // Checks if mobile lockscreen has already been unlocked once
     $(window).on('load resize', function() {
         if ($(window).width() >= 568) {     // For landscape phones, tablets, and desktops
             // Animation for SVG person blinking; blinks every 5 seconds
@@ -80,10 +80,14 @@
             }, 100);
             $('#laptop #program-code').empty();
             open = false;
+            mobileOpenedOnce = true;
             $('#desktop-container').hide();
             $('#mobile-about-me-container').show();
             if ($('#phone-lockscreen').attr("y") < 0) {
                 $('#mobile-about-me').show();
+            }
+            if (mobileOpenedOnce) {
+                $('.mobile-nav-container-zoomed').show();
             }
 
             // Lockscreen time
